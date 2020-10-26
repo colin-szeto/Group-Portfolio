@@ -1,0 +1,222 @@
+<html>
+  
+    <head>
+        <title>P5 Group ASCII Chess| Home </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta charset="utf-8">
+        <style>
+          #team-pic {
+                width: 100px;
+                float: center;
+                margin: 10px;
+            }
+          #headerOne {
+                 
+                top: 10px;
+                padding: 80px ;
+                text-align: center;
+                
+          }
+          #center{
+            float: center;
+            margin: auto;
+            text-align: center;
+          }
+          #tableOne {
+                
+                top: 70px;
+                padding: 10px ;  
+                margin: auto;
+                text-align: center;
+                
+          }
+          #tableTwo {
+                
+                top: 90px;
+                padding: 10px ; 
+                margin: auto;
+                text-align: center;
+                
+          }
+          .pairShareOne{
+            background-color: rgb(88, 189, 214);
+          }
+          .pairShareTwo{
+            background-color: rgb(250, 226, 165);
+          }
+          html, body {
+            margin: 0;
+            height: 100%;
+            color: green;
+          }
+      
+          h1{
+            font-size: 2.6em;
+          }
+
+
+          .fa{
+            font-size: 1em;
+            letter-spacing: 1em;
+            transition: all .2s;
+            color: green;
+          }
+          .btn:link,
+          .btn:visited {
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 15px 40px;
+            display: inline-block;
+            border-radius: 100px;
+            transition: all .2s;
+            position: absolute;
+            color: #4169e1;
+            font-size: 0.75em;
+          }
+
+          .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+          }
+
+          .btn:active {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
+          }
+          p {
+            text-align: center;
+            font-size: -1em
+          }
+          col-4 {
+            font-size: -3em
+          }
+
+          #background {
+            width: 100%;
+            z-index: -1;
+            float: left;
+            position: absolute;
+          }
+        </style>
+
+    </head>
+
+
+
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% block head %}
+    {% endblock %}
+  </head>
+
+  <body>
+    <!-- Navigation Bar from bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">{{name}}</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+        <div class="navbar-nav">
+          <a class="nav-link active" href="/">Home Page</a>
+          <a class="nav-link active" href="https://repl.it/@colinszeto/Group-Portfolio#templates/home.html">Coding Area </a>
+          <a class="nav-link" href="chessJs">Chess with JS</a>
+        
+        </div>
+      </div>
+    </nav>
+
+
+
+
+
+    <body style="background-color:aquamarine;">
+
+      <h1 id= "headerOne">ASCII CHESS 2.0<h1>
+      <style>
+      p {text-align: center;}
+      </style>
+      <p class = "center"> Link to group plan: <a target = "_blank" href="https://docs.google.com/document/d/1ktGsDPl07wBa6YQvsGDCKAi1Bpz_exLEj0Y3ASh-fK0/edit">Project Doc</a></p>
+      
+
+      <table id = "tableOne"style="width:80%">
+        <tr>
+          <th class = "pairShareOne">Pair Share 1</th>
+          <th class = "pairShareTwo">Pair Share 2</th> 
+        </tr>
+        <tr>
+          <th class = "pairShareOne"><a target = "_blank" href="https://padlet.com/kolinszeto/ir8kqoip55dsdu2d">Journal of Pair</a></th>
+          <th class = "pairShareTwo"><a target = "_blank" href="https://docs.google.com/document/d/1i08SNwkyA_2TCnJiLZWBPMQ7OCMuU5pGo1s7aEEmmCI/edit?pli=1">Journal of Pair</a></th> 
+        </tr>
+
+
+      <table id = "tableTwo"style="width:80%">
+        <tr>
+          <th class = "pairShareOne">Colin Szeto</th>
+          <th class = "pairShareOne">Devam Shrivastava</th> 
+          <th class = "pairShareOne">Shekar Krishnamoorthy</th>  
+
+          <th class = "pairShareTwo">Kyle Myint</th>
+          <th class = "pairShareTwo">David Kim</th> 
+        </tr>
+        <tr>
+          <th><a class = "pairShareOne" target = "_blank" href="https://repl.it/@colinszeto/Python-Web-Portfolio-Series#templates/home.html">Individual flask website</a></th><!-- Colin Szeto -->
+          <th><a class = "pairShareOne" target = "_blank" href="https://repl.it/@D3vIs4G0d/flaskportfolio#templates/home.html">Individual flask website</a></th><!-- Devam Shrivastava -->
+          <th><a class = "pairShareOne" target = "_blank" href="https://repl.it/@shekark642/flaskportfolio-1">Individual flask website</a></th><!-- Shekar Krishnamoorthy -->
+          <th><a class = "pairShareTwo" target = "_blank" href="https://repl.it/@KyleMyint/Web-Portfolio#main.py">Individual flask website</a></th><!-- Kyle Myint -->
+          <th><a class = "pairShareTwo" target = "_blank" href="https://repl.it/@Ironfire/flaskportfolio-1#templates/home.html">Individual flask website</a></th><!-- David Kim -->
+        </tr>
+        <tr>
+          <th><a class = "pairShareOne" target = "_blank" href="https://python-web-portfolio-series.colinszeto.repl.co/">Home website</a></th><!-- Colin Szeto -->
+          <th><a class = "pairShareOne" target = "_blank" href="https://flaskportfolio.d3vis4g0d.repl.co/">Home website</a></th><!-- Devam Shrivastava -->
+          <th><a class = "pairShareOne" target = "_blank" href="https://flaskportfolio-1.shekark642.repl.co/">Home website</a></th><!-- Shekar Krishnamoorthy -->
+          <th><a class = "pairShareTwo" target = "_blank" href="https://web-portfolio.kylemyint.repl.co/">Home website</a></th><!-- Kyle Myint -->
+          <th><a class = "pairShareTwo" target = "_blank" href="https://flaskportfolio-1.ironfire.repl.co/">Home website</a></th><!-- David Kim -->
+        </tr>
+      </table>
+      <div class="container-fluid">
+        <div class="product" style="margin-top: 5%;">
+          <p class = "center"> Repls </p>
+
+        <div class="row" style="padding-left: 5%;">
+          <div class="col-4">
+            <a href="https://repl.it/@KyleMyint/ASCII-Chess#main.py" class="btn">ASCII Chess v.1</a>
+          </div>
+
+          <div class="col-4">
+            <a href="https://repl.it/@colinszeto/ChessOO#piecedefinitions.py" class="btn">ASCII Chess v.2</a>
+          </div>
+
+          <div class="col-4">
+            <a href="https://repl.it/@KyleMyint/Advanced-Tictactoe-game#main.py" class="btn">Advanced Tic Tac Toe</a>
+          </div>
+
+        </div>
+
+      </div>
+
+      <img src= "https://lh4.googleusercontent.com/wPJUuvjG3QWv0lSAU3UonOqriv2TAp02BnzNfDFE4wgISqLcdk60dB4NdWlUA453msFOdeD_jtZyh-TrTuUm-ZpPH3rz-u5aR5UbXujK" alt = "Intellij">
+
+      <img  src= "https://lh5.googleusercontent.com/aq1SMyJIUwne9-1NbcsuwwKeOYlQ_zt82IRZZe0w15Qvov1focw6o8TZtADb0R9kgslVC0AiE8k0rJzy6GXuBZ2Mmw0uw6S9kejc4cAXm5BY_vMFgbLXp6Eo58xWKbmzpyKRKhgh" alt = "using github">
+
+      <img id = "background" src= "https://cdn.shopify.com/s/files/1/1297/3303/products/16-wooden-chess-board-with-coordinates-21183957249_grande.jpg?v=1575932006" alt = "using github">
+
+    </body>      
+    
+    <script src="https://threejs.org/build/three.js"></script>
+    <script src="{{ url_for('static', filename='vanta.fog.min.js') }}"></script>
+    <script>
+    VANTA.FOG({
+      el: "body",
+      blurFactor: 0.40,
+      speed: 3,
+      zoom: 4.50
+    })
+    </script>
+    <style>
+      
+    </style>
