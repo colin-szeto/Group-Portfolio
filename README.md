@@ -1,8 +1,8 @@
-### Usage of different materials week 8
+## Usage of different materials week 8
 
-## Goals
+### Goals
 
-# Kyle Myint - https://github.com/kylem314/ChessOO/blob/master/AIBot.py
+#### Kyle Myint - https://github.com/kylem314/ChessOO/blob/master/AIBot.py
 
 I completed my first 2 goals, spending most of my time this week planning out how to make and AI Chess bot.  More info on that, and what I decided to do is in comments in the file.  I began to gather data that we would need to evaluate moves - so far, I have a list of all of the possible moves that can be made, a dictionary of each of the AI's pieces and their values, and a dictionary of all of the AI's pieces that are being attacked, and which piece is attacking them.
 
