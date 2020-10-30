@@ -10,3 +10,8 @@ Self-Grade: 23/25 - I figured out a method (that should work) to create a primit
 Scrum Master Grade:  @Davem hewwo
 
 
+#template
+
+1.  Expectations are links to code.. My suggestion is README and Code, let porfolio, project and tangible artifacts do the talkin'.
+2. 20 of 25 points by student and pair on goals, artifacts, and updates to journal.
+3. 5 of 25 points by Scrum Master, Scrum master should be brief in award, should be based on artifacts produced and goals.
