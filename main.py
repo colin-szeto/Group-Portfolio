@@ -1,5 +1,5 @@
 # https://flask.palletsprojects.com/en/1.1.x/api/
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect
 #create a Flask instance
 app = Flask(__name__)
 
@@ -16,6 +16,21 @@ def home():
 def chessJS():
 
   return render_template("chessJs.html")
+
+@app.route("/index")#for the dragable chess file
+def index():
+    return render_template("index.html", display="")
+
+@app.route("/add", methods=['GET','POST'])#for the dragable chess file
+def addition():
+    if request.method == 'POST':
+        form = request.form
+        numberOne = int(form['numOne'])
+        numberTwo = int(form['numTwo'])
+        calc = numberOne + numberTwo
+        return render_template("index.html", display=calc)
+
+    return redirect("/index")
 
 @app.route("/journals")#for storing all the links to the webpage
 def journals():
