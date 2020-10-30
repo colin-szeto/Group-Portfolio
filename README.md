@@ -1,4 +1,8 @@
-### Usage of different materials
+### Usage of different materials week 9
+
+
+
+### Usage of different materials week 8
 
 GitHub repository - https://github.com/kylem314/ChessOO - implemented previous code onto github
 
