@@ -1,3 +1,4 @@
+import data
 # https://flask.palletsprojects.com/en/1.1.x/api/
 from flask import Flask, render_template, request, redirect
 #create a Flask instance
@@ -21,14 +22,14 @@ def chessJS():
 def index():
     return render_template("index.html", display="")
 
-@app.route("/add", methods=['GET','POST'])#for the dragable chess file
+@app.route("/add", methods=['GET','POST'],)#for the dragable chess file
 def addition():
     if request.method == 'POST':
         form = request.form
         numberOne = int(form['numOne'])
         numberTwo = int(form['numTwo'])
         calc = numberOne + numberTwo
-        return render_template("index.html", display=calc)
+        return render_template("index.html", your_list = data.answersdata(calc))#data.playlist()
 
     return redirect("/index")
 
