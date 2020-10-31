@@ -38,12 +38,12 @@ here is what the player sees: https://bit.ly/2TDcQGy
 
 self grade: 18/20
 I can improve on organizing the team more on the journals. For the future I will want to get the forms and DOM to interface together to provide the player with the option of of dragable pieces as the UI. I hope to implement Jinja dictonaries to store the values of the chessboard and hope to pass it into js scripts to then convert them into interactive ui for the user. 
-Scrum Master Grade:  5/5- Based on code, seems like good progress made through the week. I feel like he graded himself a bit harsh. - Devam Shrivastava
+Scrum Master Grade:  5/5- Based on code, seems like good progress made through the week. I feel like he graded himself a bit harsh. 
  
 #### Shekar Krishnamoorthy
-Goals at start of week:
-self grade: _/20
-Scrum Master Grade:  _/5
+Goals at start of week: My goals were to fix the existing code for the chess game and it implement a new user password code. Due to our original transfer from repl to intellij, some code got messed up. An improved username password system will be compatible with a web based code and allow 2 users to log in from different computers and play together
+self grade: 18/20: David and I both fixed the original code by removing and changeing parts that were working on repl but not working on intellij. We both had to push the code a lot of times until all the parts worked together to make functioning code. The only parts that are not working are the parts that we are woking on and improving for the new project idea. For the second goal, I didn't expect I would get it this week, since I would have to make a completely new interactive website which would be connected to Colin's java chess project on flask, but I didn't make too much progress on it. Other than research and a small improvement to the flask and intelliJ parts of the project, the interactive 2 player website wasn't finished at all. I hope to do more next week and maybe have at least one interactive aspect for 2 players to play on the chess game. Here is what I used - https://pusher.com/tutorials/game-python-vue
+Scrum Master Grade:  5/5- Helped the team regroup at times we were working independtently instead of as a team. Was more focused on assignment requirements than the new code, but it proved to be helpful for the team
 
 #### Devam Shrivastava
 Goals at start of week:
