@@ -14,7 +14,7 @@ Goals at start of week:
 self grade: _/20
 Scrum Master Grade:  _/5
 
-#### Colin Szeto 
+#### Colin Szeto link to updated journal: https://padlet.com/kolinszeto/ir8kqoip55dsdu2d (see corresponding column, also see "external refrences column" that I was able to populate)
 Goals at start of week:
 1. render multiple chess boards
 2. Be able to take inputs and have the computer respond to the inputs	by editing dictionaries
