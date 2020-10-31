@@ -7,8 +7,7 @@
 I completed my first 2 goals, spending most of my time this week planning out how to make and AI Chess bot.  More info on that, and what I decided to do is in comments in the file.  I began to gather data that we would need to evaluate moves - so far, I have a list of all of the possible moves that can be made, a dictionary of each of the AI's pieces and their values, and a dictionary of all of the AI's pieces that are being attacked, and which piece is attacking them.
 
 Self-Grade: 23/25 - I figured out a method (that should work) to create a primitive chess AI bot, though it may be a lot of computation and I may have to optimize it in the future.  However, I was unable to finish most of it this week, and will continue working on it in the future.
-Scrum Master Grade:  @Davem hewwo
-
+Scrum Master Grade:  5/5- I think that Kyle meant to put a 19/20 (The remaining 5 points are by meeeeeeee). I am actually amazed that Kyle could put 3 days of researching and 1 day of code and produce a decent model.
 
 #### David Kim
 Goals at start of week:
@@ -31,7 +30,7 @@ here is what the player sees: https://bit.ly/2TDcQGy
 
 self grade: 18/20
 I can improve on organizing the team more on the journals. For the future I will want to get the forms and DOM to interface together to provide the player with the option of of dragable pieces as the UI. I hope to implement Jinja dictonaries to store the values of the chessboard and hope to pass it into js scripts to then convert them into interactive ui for the user. 
-Scrum Master Grade:  _/5
+Scrum Master Grade:  5/5- Based on code, seems like good progress made through the week. I feel like he graded himself a bit harsh. - Devam Shrivastava
  
 #### Shekar Krishnamoorthy
 Goals at start of week:
@@ -40,8 +39,10 @@ Scrum Master Grade:  _/5
 
 #### Devam Shrivastava
 Goals at start of week:
-self grade: _/20
-Scrum Master Grade:  _/5
+1. My only sole goal was to work with Kyle and get the Chess AI Bot up and running. I was expecting it to be quite time straining.
+
+self grade:  17/20- I set my only goal to be to work on the AI piece since I expected that to take most of my time. As expected it did. I looked through many sources online on how to create the bot. In the end, I came up with a model, but didn't seem to work, so I collaborated with Kyle on his design of the single-player bot. I made some efficiency changes to the code, and tried to use a bit more classes in my new designs. Overall, I am lowering my grade since I failed in producing a working model, but I did help out in editing the code as I found some errors. I have commited and pushed any edits I have into my own branch rather than the master branch in order to stay away from any merging collisions.
+Scrum Master Grade:  4/5- Could have been better with communication.
 
 
 ##### template
