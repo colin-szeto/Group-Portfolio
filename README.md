@@ -21,12 +21,13 @@ implement jinja for loops to print out all contents of list: https://bit.ly/2HSg
 
 example on using DOM to call for specific JS functions: https://bit.ly/37VGuPO
 here is where the JS function is stored to communicate to the player what piece is stored:https://bit.ly/3edlFQY
+here is what the player sees: https://bit.ly/2TDcQGy
 
 self grade: 18/20
 I can improve on organizing the team more on the journals. For the future I will want to get the forms and DOM to interface together to provide the player with the option of of dragable pieces as the UI. I hope to implement Jinja dictonaries to store the values of the chessboard and hope to pass it into js scripts to then convert them into interactive ui for the user. 
 Scrum Master Grade:  _/5
 
-# template
+##### template
 
 1.  Expectations are links to code.. My suggestion is README and Code, let porfolio, project and tangible artifacts do the talkin'.
 2. 20 of 25 points by student and pair on goals, artifacts, and updates to journal.
