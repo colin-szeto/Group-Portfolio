@@ -9,6 +9,12 @@ I completed my first 2 goals, spending most of my time this week planning out ho
 Self-Grade: 23/25 - I figured out a method (that should work) to create a primitive chess AI bot, though it may be a lot of computation and I may have to optimize it in the future.  However, I was unable to finish most of it this week, and will continue working on it in the future.
 Scrum Master Grade:  @Davem hewwo
 
+
+#### David Kim
+Goals at start of week:
+self grade: _/20
+Scrum Master Grade:  _/5
+
 #### Colin Szeto 
 Goals at start of week:
 1. render multiple chess boards
@@ -26,6 +32,17 @@ here is what the player sees: https://bit.ly/2TDcQGy
 self grade: 18/20
 I can improve on organizing the team more on the journals. For the future I will want to get the forms and DOM to interface together to provide the player with the option of of dragable pieces as the UI. I hope to implement Jinja dictonaries to store the values of the chessboard and hope to pass it into js scripts to then convert them into interactive ui for the user. 
 Scrum Master Grade:  _/5
+ 
+#### Shekar Krishnamoorthy
+Goals at start of week:
+self grade: _/20
+Scrum Master Grade:  _/5
+
+#### Devam Shrivastava
+Goals at start of week:
+self grade: _/20
+Scrum Master Grade:  _/5
+
 
 ##### template
 
