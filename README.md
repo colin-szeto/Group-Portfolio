@@ -20,7 +20,8 @@ Goals at start of week:
 self grade: 17/20
 Welp, this wasn't the greatest week of coding for me. With lots of other things to do, I didn't put full effort into putting our project onto html. On Thursday, I realized that even though our formatting cannot be standardized, I should still be trying to figure out the data. Due to my stupidity, I got much less done than I would've wished, mainly by being stuck on step 1. After sacking that, I logiced out check, checkmate, and stalemate, and now I just need to put it into code. I did get started on the check code, and checkmate/stalemate should work. I figured out the basics of how I want to store data for 5d chess, and I did make a fork off of the original code, but there isn't much different. We did make sure that we could use intellij, and I, at least, have transferred over fully from repl.
 
-Scrum Master Grade:  _/5
+Scrum Master Grade:  5/5
+Good products made and got through most of the goals. An off week for him is still pretty good
 
 #### Colin Szeto 
 Goals at start of week:
