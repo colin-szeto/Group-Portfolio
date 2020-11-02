@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{%block content %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!---
+{% for key, value in board_list.items() %}
+    <h1>Key: {{key}}</h1>
+    <h2>Value: {{value}}</h2>
+{% endfor %}
+
+{% for dict_item in parent_list %}
+    {% for key, value in dict_item.items() %}
+        <h1>Key: {{key}}</h1>
+        <h2>Value: {{value}}</h2>
+    {% endfor %}
+{% endfor %}
+
+{% for your_list_element in your_list %}
+<p>{{ your_list_element }} </p>
+{% endfor %}
+
+{% for key, value in board_list() %}
+
+{% for key, value in board_dict() %}
+    <p>{{ key }}</p>
+    <p>{{ value }}</p>
+{% endfor %}
+-->
+
+
+{% for key, value in board_dict.items() %}
+    <p>{{ key }}</p>
+    <p>{{ value }}</p>
+{% endfor %}
+
+</body>
+</html>
+
+{% endblock %}
