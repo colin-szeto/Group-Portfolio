@@ -1,7 +1,7 @@
-import data
-import chessData
 # https://flask.palletsprojects.com/en/1.1.x/api/
+import data
 from flask import Flask, render_template, request, redirect
+from data import board
 #create a Flask instance
 app = Flask(__name__)
 
@@ -21,7 +21,7 @@ def chessJS():
 
 @app.route("/chessPush")#for the pritn chess board from dictonaries
 def chessPush():
-    return render_template("chessPush.html", board_dict=data.boarddata())
+    return render_template("chessPush.html", board=board)
 
 @app.route("/index")#for the dragable chess file
 def index():
