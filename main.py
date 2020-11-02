@@ -19,7 +19,7 @@ def chessJS():
 
   return render_template("chessJs.html")
 
-@app.route("/chessPush")#for the pritn chess board from dictonaries
+@app.route("/chessPush")#for the print chess board from dictonaries
 def chessPush():
     return render_template("chessPush.html", board=board)
 
