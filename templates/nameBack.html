@@ -1,0 +1,19 @@
+{%block content %}
+
+<form method="post">
+    <table>
+        <tr>
+            <td> Your Name: </td> <td> <input type="text" name="name" required/></td>
+        </tr>
+    </table>
+    <br>
+    <input class="button" type ="submit" formaction="/add" value="What is My name?" />
+</form>
+
+<!--<p> {{ display }}<p>-->
+
+<p>{{ name }} </p>
+
+<div style="clear:both;"></div>
+
+{% endblock %}

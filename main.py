@@ -16,7 +16,6 @@ def home():
 
 @app.route("/chessJs")#for the dragable chess file
 def chessJS():
-
   return render_template("chessJs.html")
 
 @app.route("/chessPush")#for the print chess board from dictonaries
@@ -37,6 +36,16 @@ def addition():
         return render_template("index.html", your_list = data.answersdata(calc))#data.playlist()
 
     return redirect("/index")
+
+
+@app.route("/yourName", methods=['GET','POST'],)#for the dragable chess file
+def yourName():
+    if request.method == 'POST':
+        form = request.form
+        name = int(form['name'])
+        return render_template("index.html", name = name)
+    return redirect("/nameBack")
+
 
 @app.route("/journals")#for storing all the links to the webpage
 def journals():
