@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- this is the template that allows for the user to  -->
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <!--even style is green, odd styles is white -->
+    <style>
+        .even {
+        background-color: #4CAF50;
+        border: none;
+        }
+
+        .odd {
+        background-color: #d6d3ba;
+        border: none;
+        }
+
+        .even_black {
+        background-color: #4CAF50;
+        border: none;
+        color: black;
+        }
+        .odd_black {
+        background-color: #d6d3ba;
+        border: none;
+        color: black;
+        }
+        .even_white {
+        background-color: #4CAF50;
+        border: none;
+        color: black;
+        }
+        .odd_black {
+        background-color: #d6d3ba;
+        border: none;
+        color: black;
+        }
+
+        .selected{
+        background-color: #FFFF00;
+        border: none;
+        }
+        .white {
+        color: black;
+        }
+        .black {
+        color: black;
+        }
+    </style>
+</head>
+<body>
+<!-- this is the working version -->
+<form method="post" > <!-- using the post tag to identify that this is for post -->
+    <input class="button" type ="submit" formaction="/createBoardTable" value="Create the Chess Board" /><!-- this the button that allows the user to buld the board -->
+</form>
+
+<form method="post" id="chessInput"> <!-- this is another post tag to allow for user interaction -->
+    <table>
+        {%for row in allBoard%}
+        <tr><!-- if row == board 5 -->
+            {% if loop.index is divisibleby 2 %}
+            {% for header,unicode in row.items() %} <!-- if the row is even, 8,6,4,2 -->
+            {% if unicode == "emptySpace" %}<!-- if there is emtySpace as the value of the dictonary -->
+            <!-- this is replacing with white space -->
+            <th><input class = "{{ loop.cycle('even', 'odd') }}" type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction={{header}} /></th>
+            {%else%}
+            <th><input class = "{{ loop.cycle('even', 'odd') }}" type ="submit" value={{unicode}} inputName="firstButton" formaction={{header}} /></th>
+            {% endif %}
+            {% endfor %}
+            {% else %}
+            {% for header,unicode  in row.items() %}   <!-- if the row is odd, 7,5,3,1 -->
+            {% if unicode == "emptySpace" %}<!-- if there is emtySpace as the value of the dictonary -->
+            <!-- this is replacing with white space -->
+            <th><input  class = "{{ loop.cycle('odd', 'even') }}" type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction={{header}} /></th>
+            {%else%}
+            <th><input  class = "{{ loop.cycle('odd', 'even') }}" type ="submit" value={{unicode}} inputName="firstButton" formaction={{header}} /></th>
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+        </tr>
+        {% endfor %}
+    </table>
+</form>
+
+
+{{ displayClicked }} <!-- this line is to communicate hints to the player -->
+<table>
+    <tr>
+        <th>move number</th>
+    </tr>
+    {% for row in movelist %}
+    <tr>
+        <th class = "{{ loop.cycle('white', 'black') }}" >{{ loop.index }} {{row}}</th>
+    </tr>
+    {% endfor %}
+</table>
+
+<h1>{{ displayRoutes }}</h1> <!-- this line is for debuggin -->
+
+<img src="{{ displayImage }}"> <!-- this is to display the win image -->
+
+</body>
+
+</html>
+
+{% endblock %}
