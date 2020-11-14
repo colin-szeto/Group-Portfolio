@@ -7,7 +7,7 @@ def playdata():
     info = {"asnwer1": answer1}
     return info
 
-thislist = [1, 1, 1]
+thislist = []
 
 def answersdata(toAppend):
     thislist.append(toAppend)
