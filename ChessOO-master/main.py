@@ -8,7 +8,7 @@ exec(open("password.py").read())
 
 
 def replaygame():
-    exec(open("replaygame.py").read())
+    exec(open("../replaygame.py").read())
 
 
 def key(string_length=10):
@@ -185,7 +185,7 @@ print(x[3]+x[4])
 def mainmenu(Key, key, replaying, exited, settingexit, whitecolor, blackcolor, colorset):
     os.system("clear")
 
-    replayfile = open("savereplay.txt").read()
+    replayfile = open("../savereplay.txt").read()
     indexx = replayfile.find(Key)
     while indexx != -1:
         if indexx == -1:
@@ -203,10 +203,10 @@ def mainmenu(Key, key, replaying, exited, settingexit, whitecolor, blackcolor, c
 
     if start == "1" or start == "start game":
         print("")
-        savefile = open("savereplay.txt", "a")
+        savefile = open("../savereplay.txt", "a")
         savefile.write(Key)
         savefile.close()
-        savefile = open("savenotation.txt", "a")
+        savefile = open("../savenotation.txt", "a")
         savefile.write(Key)
         savefile.close()
         whitepersp(whitecolor, blackcolor, board)
