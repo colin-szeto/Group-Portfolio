@@ -62,3 +62,17 @@ def movesdata(toAppend):
 
 # this formats the output of sets into an array of arrays for formating to send to the user
 sets = [movelist[x:x+2] for x in range(0, len(movelist), 2)]
+"""
+inital goals:
+    1.logic for communicating to movepiece
+        when a new list of two values are created then pass onto move pieve
+        when the values are invalid (can't move there), delete last list (representhing the last beginning and end square) 
+            also communicate with the user through template that move was invalid
+        when the values are correct 
+            update the dictonary
+    
+    2.resign button 
+    
+    3.winscreens to rediect user to the key of replay function
+    menu with html, flesh out the chessDict before creating the board
+"""
