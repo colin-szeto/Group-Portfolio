@@ -49,9 +49,25 @@
         .black {
         color: black;
         }
+
+        #turn__table {
+            position: absolute;
+            left: 300px;
+            top:55px;
+            width: 175px;
+            height: 300px;
+            overflow: auto;
+        }
+        .turn__number {
+        text-align: center;
+        }
+        .turn__values {
+        text-align: center;
+        }
+
     </style>
 </head>
-<body>
+<body onLoad="scrollDiv_init()">
 <!-- this is the working version -->
 <form method="post" > <!-- using the post tag to identify that this is for post -->
     <input class="button" type ="submit" formaction="/createBoardTable" value="Create the Chess Board" /><!-- this the button that allows the user to buld the board -->
@@ -62,23 +78,23 @@
         {%for row in allBoard%}
         <tr><!-- if row == board 5 -->
             {% if loop.index is divisibleby 2 %}
-            {% for header,unicode in row.items() %} <!-- if the row is even, 8,6,4,2 -->
-            {% if unicode == "emptySpace" %}<!-- if there is emtySpace as the value of the dictonary -->
-            <!-- this is replacing with white space -->
-            <th><input class = "{{ loop.cycle('even', 'odd') }}" type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction={{header}} /></th>
-            {%else%}
-            <th><input class = "{{ loop.cycle('even', 'odd') }}" type ="submit" value={{unicode}} inputName="firstButton" formaction={{header}} /></th>
-            {% endif %}
-            {% endfor %}
+                {% for header,unicode in row.items() %} <!-- if the row is even, 8,6,4,2 -->
+                    {% if unicode == "emptySpace" %}<!-- if there is emtySpace as the value of the dictonary -->
+                        <!-- this is replacing with white space -->
+                        <th><input class = "{{ loop.cycle('even', 'odd') }}" type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction={{header}} /></th>
+                    {%else%}
+                        <th><input class = "{{ loop.cycle('even', 'odd') }}" type ="submit" value={{unicode}} inputName="firstButton" formaction={{header}} /></th>
+                    {% endif %}
+                {% endfor %}
             {% else %}
-            {% for header,unicode  in row.items() %}   <!-- if the row is odd, 7,5,3,1 -->
-            {% if unicode == "emptySpace" %}<!-- if there is emtySpace as the value of the dictonary -->
-            <!-- this is replacing with white space -->
-            <th><input  class = "{{ loop.cycle('odd', 'even') }}" type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction={{header}} /></th>
-            {%else%}
-            <th><input  class = "{{ loop.cycle('odd', 'even') }}" type ="submit" value={{unicode}} inputName="firstButton" formaction={{header}} /></th>
-            {% endif %}
-            {% endfor %}
+                {% for header,unicode  in row.items() %}   <!-- if the row is odd, 7,5,3,1 -->
+                    {% if unicode == "emptySpace" %}<!-- if there is emtySpace as the value of the dictonary -->
+                        <!-- this is replacing with white space -->
+                        <th><input  class = "{{ loop.cycle('odd', 'even') }}" type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction={{header}} /></th>
+                    {%else%}
+                        <th><input  class = "{{ loop.cycle('odd', 'even') }}" type ="submit" value={{unicode}} inputName="firstButton" formaction={{header}} /></th>
+                    {% endif %}
+                {% endfor %}
             {% endif %}
         </tr>
         {% endfor %}
@@ -87,21 +103,61 @@
 
 
 {{ displayClicked }} <!-- this line is to communicate hints to the player -->
-<table>
-    <tr>
-        <th>move number</th>
-    </tr>
-    {% for row in movelist %}
-    <tr>
-        <th class = "{{ loop.cycle('white', 'black') }}" >{{ loop.index }} {{row}}</th>
-    </tr>
-    {% endfor %}
-</table>
+
+<div id="turn__table" onMouseOver="pauseDiv()" onMouseOut="resumeDiv()" >
+    <table>
+        <tr>
+            <th>move #</th>
+            <th class="turn__values">values</th>
+        </tr>
+        {% for row in movelist %}
+        <tr>
+            <th class="turn__number">{{ loop.index }}</th>
+            <th class= "{{ loop.cycle('white', 'black') }}" >{{row}}</th>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
 
 <h1>{{ displayRoutes }}</h1> <!-- this line is for debuggin -->
 
 <img src="{{ displayImage }}"> <!-- this is to display the win image -->
 
+
+<script language="javascript">
+ScrollRate = .0000000000000001;
+
+function scrollDiv_init() {
+	DivElmnt = document.getElementById('turn__table');
+	ReachedMaxScroll = false;
+
+	DivElmnt.scrollTop = 0;
+	PreviousScrollTop  = 0;
+
+	ScrollInterval = setInterval('scrollDiv()', ScrollRate);
+}
+
+
+function scrollDiv() {
+
+	if (!ReachedMaxScroll) {
+		DivElmnt.scrollTop = PreviousScrollTop;
+		PreviousScrollTop++;
+
+		ReachedMaxScroll = DivElmnt.scrollTop >= (DivElmnt.scrollHeight - DivElmnt.offsetHeight);
+	}
+
+}
+
+function pauseDiv() {
+	clearInterval(ScrollInterval);
+}
+
+function resumeDiv() {
+	PreviousScrollTop = DivElmnt.scrollTop;
+	ScrollInterval    = setInterval('scrollDiv()', ScrollRate);
+}
+</script>
 </body>
 
 </html>
