@@ -53,7 +53,7 @@ def yourName():
 
 @app.route("/journals")#for storing all the links to the webpage
 def journals():
-  return render_template("journals.html",repl="repl of website", website ="link to personal website")#allows to define the text that is hyperlinked on the the personal journals
+  return render_template("journals.html")#,repl="repl of website", website ="link to personal website")#allows to define the text that is hyperlinked on the the personal journals
 
 #--------------------------------------------------- here is where the chess with POST starts
 @app.route("/project/chessMenu/") # this gets the user to the chess board
