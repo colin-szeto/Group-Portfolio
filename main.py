@@ -18,19 +18,19 @@ def home():
     #data is passed as a parameter
     return render_template("home.html")#home has to be under templates
 
-@app.route("/chessJs")#for the dragable chess file
+@app.route("/project/chessJs")#for the dragable chess file
 def chessJS():
   return render_template("chessJs.html")
 
-@app.route("/chessPush")#for the print chess board from dictonaries
+@app.route("/project/chessPush")#for the print chess board from dictonaries
 def chessPush():
     return render_template("chessPush.html", displayBoard=board)
 
-@app.route("/index")#for the dragable chess file
+@app.route("/project/index")#for the dragable chess file
 def index():
     return render_template("index.html", display="")
 
-@app.route("/add", methods=['GET','POST'],)#for the dragable chess file
+@app.route("/project/add", methods=['GET','POST'],)#for the dragable chess file
 def addition():
     if request.method == 'POST':
         form = request.form
@@ -42,7 +42,7 @@ def addition():
     return redirect("/index")
 
 
-@app.route("/yourName", methods=['GET','POST'],)#for the dragable chess file
+@app.route("/project/yourName", methods=['GET','POST'],)#for the dragable chess file
 def yourName():
     if request.method == 'POST':
         form = request.form
@@ -51,7 +51,7 @@ def yourName():
     return redirect("/nameBack")
 
 
-@app.route("/journals")#for storing all the links to the webpage
+@app.route("/project/journals")#for storing all the links to the webpage
 def journals():
   return render_template("journals.html")#,repl="repl of website", website ="link to personal website")#allows to define the text that is hyperlinked on the the personal journals
 
