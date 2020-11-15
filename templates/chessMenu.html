@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .center{
+          margin: auto;
+        }
+        #title{
+            font-size:100px;
+        }
+    </style>
+</head>
+<body>
+<form class="center" method="post" >
+<table class="center">
+    <tr>
+        <th id="title">Chess Main Menu</th>
+    </tr>
+    <tr>
+         <!-- using the post tag to identify that this is for post -->
+            <td><input class="button" type ="submit" formaction="/createBoardTable" value="Create the Chess Board" /><td>
+                <!-- this the button that allows the user to buld the board -->
+    </tr>
+    <tr>
+        <td><input class="button" type ="submit" formaction="/Customization" value="Customization" disabled/><td>
+    </tr>
+    <tr>
+        <td><input class="button" type ="submit" formaction="/chessReadMe" value="Read Me" disabled/><td>
+    </tr>
+</table>
+</form>
+<!-- we intend this document to create the menu, settings customization, picking the -->
+</body>
+</html>
+{% endblock %}

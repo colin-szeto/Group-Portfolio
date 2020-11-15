@@ -1,6 +1,4 @@
-{% extends "base.html" %}
 
-{% block content %}
 <!-- this is the template that allows for the user to  -->
 <head>
     <meta charset="UTF-8">
@@ -11,11 +9,15 @@
         .even {
         background-color: #4CAF50;
         border: none;
+        height: 25px;
+        width: 25px;
         }
 
         .odd {
         background-color: #d6d3ba;
         border: none;
+        height: 25px;
+        width: 25px;
         }
 
         .even_black {
@@ -51,11 +53,9 @@
         }
 
         #turn__table {
-            position: absolute;
-            left: 300px;
-            top:55px;
+
             width: 175px;
-            height: 300px;
+            height: 180px;
             overflow: auto;
         }
         .turn__number {
@@ -64,60 +64,77 @@
         .turn__values {
         text-align: center;
         }
+        .center__table{
+            position: relative;
+            margin: auto;
+            top: 50px;
+        }
+        #header-fixed {
+            position: fixed;
+            top: 0px; display:none;
+            background-color:white;
+        }
 
     </style>
 </head>
 <body onLoad="scrollDiv_init()">
 <!-- this is the working version -->
-<form method="post" > <!-- using the post tag to identify that this is for post -->
-    <input class="button" type ="submit" formaction="/createBoardTable" value="Create the Chess Board" /><!-- this the button that allows the user to buld the board -->
-</form>
-
-<form method="post" id="chessInput"> <!-- this is another post tag to allow for user interaction -->
-    <table>
-        {%for row in allBoard%}
-        <tr><!-- if row == board 5 -->
-            {% if loop.index is divisibleby 2 %}
-                {% for header,unicode in row.items() %} <!-- if the row is even, 8,6,4,2 -->
-                    {% if unicode == "emptySpace" %}<!-- if there is emtySpace as the value of the dictonary -->
+<table class="center__table">
+    <tr>
+        <th>
+            <form method="post" id="chessInput"> <!-- this is another post tag to allow for user interaction -->
+                <table>
+                    {%for row in allBoard%}
+                    <tr><!-- if row == board 5 -->
+                        {% if loop.index is divisibleby 2 %}
+                        {% for header,unicode in row.items() %} <!-- if the row is even, 8,6,4,2 -->
+                        {% if unicode == "emptySpace" %}<!-- if there is emtySpace as the value of the dictonary -->
                         <!-- this is replacing with white space -->
                         <th><input class = "{{ loop.cycle('even', 'odd') }}" type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction={{header}} /></th>
-                    {%else%}
+                        {%else%}
                         <th><input class = "{{ loop.cycle('even', 'odd') }}" type ="submit" value={{unicode}} inputName="firstButton" formaction={{header}} /></th>
-                    {% endif %}
-                {% endfor %}
-            {% else %}
-                {% for header,unicode  in row.items() %}   <!-- if the row is odd, 7,5,3,1 -->
-                    {% if unicode == "emptySpace" %}<!-- if there is emtySpace as the value of the dictonary -->
+                        {% endif %}
+                        {% endfor %}
+                        {% else %}
+                        {% for header,unicode  in row.items() %}   <!-- if the row is odd, 7,5,3,1 -->
+                        {% if unicode == "emptySpace" %}<!-- if there is emtySpace as the value of the dictonary -->
                         <!-- this is replacing with white space -->
                         <th><input  class = "{{ loop.cycle('odd', 'even') }}" type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction={{header}} /></th>
-                    {%else%}
+                        {%else%}
                         <th><input  class = "{{ loop.cycle('odd', 'even') }}" type ="submit" value={{unicode}} inputName="firstButton" formaction={{header}} /></th>
-                    {% endif %}
-                {% endfor %}
-            {% endif %}
-        </tr>
-        {% endfor %}
-    </table>
-</form>
+                        {% endif %}
+                        {% endfor %}
+                        {% endif %}
+                    </tr>
+                    {% endfor %}
 
-
-{{ displayClicked }} <!-- this line is to communicate hints to the player -->
-
-<div id="turn__table" onMouseOver="pauseDiv()" onMouseOut="resumeDiv()" >
-    <table>
-        <tr>
-            <th>move #</th>
-            <th class="turn__values">values</th>
-        </tr>
-        {% for row in movelist %}
-        <tr>
-            <th class="turn__number">{{ loop.index }}</th>
-            <th class= "{{ loop.cycle('white', 'black') }}" >{{row}}</th>
-        </tr>
-        {% endfor %}
-    </table>
-</div>
+                </table>
+            </form>
+        </th>
+        <th>
+            <table>
+                <tr>
+                    <th>move #</th>
+                    <th class="turn__values">&nbsp;&nbsp;&nbsp;&nbsp;values</th>
+                </tr>
+            </table>
+            <div id="turn__table">
+                <table>
+                    {% for row in movelist %}
+                    <tr>
+                        <th class="turn__number">&nbsp;&nbsp;&nbsp;&nbsp;{{ loop.index }}</th>
+                        <th class= "{{ loop.cycle('white', 'black') }}" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{row}}</th>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </th>
+    </tr>
+    <tr>
+        <td>Previously Selected Cell: {{ displayClicked }}</td><!-- this line is to communicate hints to the player -->
+        <td>Message to the player:</td> <!-- this line is to communicate weather if the move was valid to the player -->
+    </tr>
+</table>
 
 <h1>{{ displayRoutes }}</h1> <!-- this line is for debuggin -->
 
@@ -125,6 +142,8 @@
 
 
 <script language="javascript">
+
+//this is what allows the tabel to continously update
 function scrollDiv_init() {
     DivElmnt = document.getElementById('turn__table');
       instant_scroll()
@@ -134,8 +153,8 @@ function instant_scroll(){
   DivElmnt.scrollTop = DivElmnt.scrollHeight
 }
 </script>
+
 </body>
 
 </html>
 
-{% endblock %}

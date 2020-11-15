@@ -56,6 +56,10 @@ def journals():
   return render_template("journals.html",repl="repl of website", website ="link to personal website")#allows to define the text that is hyperlinked on the the personal journals
 
 #--------------------------------------------------- here is where the chess with POST starts
+@app.route("/project/chessMenu/") # this gets the user to the chess board
+def chessMenu():
+    return render_template("chessMenu.html")
+
 @app.route("/project/chessDictTable/") # this gets the user to the chess board
 def chessDictTable_route():
     return render_template("chessDictTable.html")
