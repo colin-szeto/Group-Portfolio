@@ -28,7 +28,7 @@ from zwhitepersp import *
 from zblackpersp import *
 from checkfunctions import *
 from protectionfunctions import *
-from main import mainmenu, key
+#from main import mainmenu, key
 
 
 def movepiece(board, storeboard, whitemove, whitecolor, blackcolor):

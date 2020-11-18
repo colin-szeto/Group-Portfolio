@@ -1,4 +1,10 @@
 #this is the file that you will be editing to edit the display on the buttons
+from movepiece import len2, len3, len4, len5, len6, len7
+"""from piecedefinitions import *
+from zwhitepersp import *
+from zblackpersp import *
+from checkfunctions import *
+from protectionfunctions import *"""
 
 board = {
     "a8": "BR1n", "b8": "BN1", "c8": "BB1", "d8": "BQ1", "e8": "BK1n", "f8": "BB2", "g8": "BN2", "h8": "BR2n",
@@ -59,9 +65,44 @@ def movesdata(toAppend):
     movelist.append(toAppend)
     sets = [movelist[x:x+2] for x in range(0, len(movelist), 2)]
     return sets
+"""=================below has been added 11/17/20"""
 
-# this formats the output of sets into an array of arrays for formating to send to the user
-sets = [movelist[x:x+2] for x in range(0, len(movelist), 2)]
+def actualMove(currentMove):
+    actMove = round(currentMove/2)
+    return actMove
+
+def previousMove(acutalMove):
+    if acutalMove%2 != 0:
+        print("previously: white's move")
+    else:
+        print("previously: black's move") #this is the player that is wi
+# initializing N
+N = 2
+res = movelist[-N:]
+
+#print("move number: "+ str(acutalMove(currentMove)))
+
+def sample(currentMove,res):
+    b = currentMove%2
+    if b != 0:
+        #this means the only the first value of the move has been selected
+        message = "cannot sample the values yet"
+    else:
+        #this means that the move piece code will run
+        usermove = ' '.join(res)#this is the string that is passed into movePiece
+        message = "last two moves were"+ " " + usermove
+        """try:
+            move1 = {2: len2, 3: len3, 4: len4, 5: len5, 6: len6, 7: len7}
+            move1[len(usermove)](usermove, board)#, storeboard, whitemove, whitecolor, blackcolor
+        except Exception as e:
+            message = "Please enter valid move." + e
+            #movepiece(board, storeboard, whitemove, whitecolor, blackcolor)"""
+    return message
+
+""""
+finalString = ' '.join(res)
+"""
+
 """
 inital goals:
     1.logic for communicating to movepiece

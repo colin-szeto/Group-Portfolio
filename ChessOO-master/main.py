@@ -210,7 +210,7 @@ def mainmenu(Key, key, replaying, exited, settingexit, whitecolor, blackcolor, c
         savefile.write(Key)
         savefile.close()
         whitepersp(whitecolor, blackcolor, board)
-        movepiece(board, storeboard, whitemove, whitecolor, blackcolor)
+        movepiece(board, storeboard, whitemove, whitecolor, blackcolor)#here is where the user input is taken
 
     elif start == "2" or start == "play replay":
         replaygame()
