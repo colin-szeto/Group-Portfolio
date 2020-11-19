@@ -1,4 +1,4 @@
-This is the Flask Web Group Portfolio by Colin Szeto, David Kim, Shekar Krishnamoorthy, Kyle Mint, Devam Shrivatsava
+This is the Flask Web Group Portfolio by Colin Szeto, David Kim, Shekar Krishnamoorthy, Kyle Myint, Devam Shrivatsava
 
 We designed our home screen using styling in the home page tab, with all necessary items to navigate to important parts of our project
 We implemented code featuring all of our journals in the journals tab
