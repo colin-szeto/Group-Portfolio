@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{%block content %}
+
+<html>
+
+<head>
+    <style>
+      .all_table {
+        width: 800px;
+      }
+      th, td {
+        /* the cell style of the table*/
+        /* border: 1px solid black;*/
+
+      }
+      .center_on_page{
+        /* centering the whole div in the middle of the page*/
+        max-width: 500px;
+        margin: auto;
+      }
+
+      .text_align_center{
+        /* for centering text within their divs*/
+        text-align: center;
+      }
+
+      .row_links_journal {
+        /* this style corresponds to the row of the table containing the journal links*/
+        text-align: left;
+
+      }
+
+      .row_links_out {
+        /* this style corresponds to the row of the table containing the journal links*/
+        text-align: center;
+        text-align: left;
+        }
+
+        .pairShareOne{
+        background-color: rgb(88, 189, 200);
+        }
+        .pairShareTwo{
+        background-color: rgb(250, 226, 165);
+        }
+
+        body {
+            color: black;
+        }
+  </style>
+</head>
+
+
+<body>
+<h1 class="text_align_center">Journals of Members</h1>
+<table>
+    <tr>
+        <th colspan="3" class="text_align_center"><a class="pairShareOne">Pair Share 1</a></th>
+        <th colspan="3" class="text_align_center"><a class="pairShareTwo">Pair Share 2</a></th>
+    </tr>
+    <tr>
+        <td colspan="3" class="row_links_journal" >
+            <a target = "_blank" href="https://padlet.com/kolinszeto/ir8kqoip55dsdu2d">Journal of Pair</a>
+        </td>
+        <td colspan="3" class="row_links_journal">
+            <a target = "_blank" href="https://docs.google.com/document/d/1i08SNwkyA_2TCnJiLZWBPMQ7OCMuU5pGo1s7aEEmmCI/edit?pli=1">Journal of Pair</a>
+        </td>
+    </tr>
+    <tr>
+        <th class="row_links_out">Colin Szeto</th><!-- Colin Szeto -->
+        <th class="row_links_out">Devam Shrivastava</th><!-- Devam Shrivastava -->
+        <th class="row_links_out">Shekar Krishnamoorthy</th><!-- Shekar Krishnamoorthy -->
+        <th class="row_links_out">Kyle Myint</th><!-- Kyle Myint -->
+        <th class="row_links_out">David Kim</th><!-- David Kim -->
+    </tr>
+    <tr>
+        <th class="row_links_out"><a  target = "_blank" href="https://repl.it/@colinszeto/Python-Web-Portfolio-Series#templates/home.html">{{ repl }}</a></th><!-- Colin Szeto -->
+        <th class="row_links_out"><a  target = "_blank" href="https://repl.it/@D3vIs4G0d/flaskportfolio#templates/home.html">{{ repl }}</a></th><!-- Devam Shrivastava -->
+        <th class="row_links_out"><a  target = "_blank" href="https://repl.it/@shekark642/flaskportfolio-1">{{ repl }}</a></th><!-- Shekar Krishnamoorthy -->
+        <th class="row_links_out"><a  target = "_blank" href="https://repl.it/@KyleMyint/Web-Portfolio#main.py">{{ repl }}</a></th><!-- Kyle Myint -->
+        <th class="row_links_out"><a  target = "_blank" href="https://repl.it/@Ironfire/flaskportfolio-1#templates/home.html">{{ repl }}</a></th><!-- David Kim -->
+    </tr>
+    <tr>
+        <th class="row_links_out"><a  target = "_blank" href="https://python-web-portfolio-series.colinszeto.repl.co/">{{ website }}</a></th><!-- Colin Szeto -->
+        <th class="row_links_out"><a  target = "_blank" href="https://flaskportfolio.d3vis4g0d.repl.co/">{{ website }}</a></th><!-- Devam Shrivastava -->
+        <th class="row_links_out"><a  target = "_blank" href="https://flaskportfolio-1.shekark642.repl.co/">{{ website }}</a></th><!-- Shekar Krishnamoorthy -->
+        <th class="row_links_out"><a  target = "_blank" href="https://web-portfolio.kylemyint.repl.co/">{{ website }}</a></th><!-- Kyle Myint -->
+        <th class="row_links_out"><a  target = "_blank" href="https://flaskportfolio-1.ironfire.repl.co/">{{ website }}</a></th><!-- David Kim -->
+    </tr>
+</table>
+
+</body>
+
+</html>
+
+{% endblock %}
