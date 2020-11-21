@@ -14,9 +14,7 @@ app = Flask(__name__)
 #connects default URL of server to a python function
 @app.route('/')
 def home():
-    #function uses Flask import (Jinga) to render HTML
-    #data is passed as a parameter
-    return render_template("home.html")#home has to be under templates
+    return render_template("home.html",github="github", website ="link website")#home has to be under templates
 
 @app.route("/project/chessJs")#for the dragable chess file
 def chessJS():

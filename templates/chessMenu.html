@@ -13,6 +13,86 @@
         #title{
             font-size:100px;
         }
+        /* ------------- this is the css for the play button ------------- */
+        a1 {
+            border: 4px solid #3F3F3F;
+            color: #3F3F3F;
+            display: inline-block;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 24px;
+            margin: auto;
+            padding: 12px 32px 12px 82px;
+            position: relative;
+            text-decoration: none;
+        }
+
+        a1 .label,
+        a1 .icon-arrow {
+            backface-visibility: hidden;
+            transform: translateZ(0);
+            perspective: 1000;
+        }
+
+        a1 .label {
+            display: inline-block;
+            transition: transform .5s cubic-bezier(0.86, 0, 0.07, 1);
+        }
+
+        a1 .icon-arrow {
+            fill: #3F3F3F;
+            height: 15px;
+            top: 17px;
+            transition: transform .5s cubic-bezier(0.86, 0, 0.07, 1), opacity .4s cubic-bezier(0.86, 0, 0.07, 1);
+            width: 35px;
+        }
+
+        a1 .icon-arrow.before {
+            left: 32px;
+            margin-right: 15px;
+            position: absolute;
+            transform-origin: left center;
+        }
+
+        a1 .icon-arrow.after {
+            margin-left: 15px;
+            opacity: 0;
+            position: absolute;
+            right: 32px;
+            transform: translateX(75%) scaleX(0.1);
+            transform-origin: right center;
+        }
+
+        a1:hover .label {
+            transform: translateX(-52px);
+        }
+
+        a1:hover .icon-arrow.before {
+            opacity: 0;
+            transform: translateX(-75%) scaleX(0.1);
+        }
+
+        a1:hover .icon-arrow.after {
+            opacity: 1;
+            transform: translateX(0) scaleX(1);
+        }
+
+        a1:active {
+            border-color: #FD6154;
+            color: #FD6154;
+        }
+
+        a1:active .icon-arrow {
+            fill: #FD6154;
+        }
+
+        button[type=submit] {
+            background: #b7edec;
+            padding:0px;
+            border:0 none;
+            cursor:pointer;
+            border-radius: 0px;
+        }
     </style>
 </head>
 <body>
@@ -20,11 +100,58 @@
 <table class="center">
     <tr>
         <th id="title">Chess Main Menu</th>
-    </tr>
+    </tr><!-- this is the play chess button -->
     <tr>
-         <!-- using the post tag to identify that this is for post -->
+        <td>
+            <button type="submit" formaction="/createBoardTable" value="Play Replay">
+                <a1>
+                <svg class="icon-arrow before">
+                    <use xlink:href="#arrow"></use>
+                </svg>
+
+                <span class="label">Play Chess</span>
+
+                <svg class="icon-arrow after">
+                    <use xlink:href="#arrow"></use>
+                </svg>
+                </a1>
+
+                <svg style="display: none;">
+                    <defs>
+                        <symbol id="arrow" viewBox="0 0 35 15">
+                            <title>Arrow</title>
+                            <path d="M27.172 5L25 2.828 27.828 0 34.9 7.071l-7.07 7.071L25 11.314 27.314 9H0V5h27.172z "/>
+                        </symbol>
+                    </defs>
+                </svg>
+            </button>
+
+        </td>
+<!--
+        <a1>
+        <svg class="icon-arrow before">
+            <use xlink:href="#arrow"></use>
+        </svg>
+
+        <span class="label">Play Chess</span>
+
+        <svg class="icon-arrow after">
+            <use xlink:href="#arrow"></use>
+        </svg>
+        </a1>
+
+        <svg style="display: none;">
+            <defs>
+                <symbol id="arrow" viewBox="0 0 35 15">
+                    <title>Arrow</title>
+                    <path d="M27.172 5L25 2.828 27.828 0 34.9 7.071l-7.07 7.071L25 11.314 27.314 9H0V5h27.172z "/>
+                </symbol>
+            </defs>
+        </svg>
+-->
+         <!-- using the post tag to identify that this is for post
             <td><input class="button" type ="submit" formaction="/createBoardTable" value="Create the Chess Board" /><td>
-                <!-- this the button that allows the user to buld the board -->
+                this the button that allows the user to buld the board -->
     </tr>
     <tr>
         <td><input class="button" type ="submit" formaction="/Customization" value="Play Replay" disabled/><td>

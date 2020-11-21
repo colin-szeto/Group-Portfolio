@@ -2,35 +2,121 @@
 
 {%block content %}
 <html>
-    <head>
-        <title>P5 Group ASCII Chess| Home </title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="/static/style.css">
-
-    </head>
-
-<html>
-  <head>
+<head>
+    <title>P5 Group ASCII Chess| Home </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    {% block head %}
-    {% endblock %}
-  </head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+      #background {
+         position: fixed;
+          right-margin: auto;
+          left-margin: auto;
+          width: 100%;
+          z-index: -10;
+            top: 5%;
+        }
 
-  <body>
-    
+        #footer {
+            position: absolute;
+            bottom: 0px;
+            height: 150px;
+            width: 100%;
+        }
+        .all_table {
+        width: 800px;
+        }
+        th, td {
+        /* the cell style of the table*/
+        /* border: 1px solid black;*/
+        padding-right:20px;
+        padding-left:20px;
+        }
+        .center_on_page{
+        /* centering the whole div in the middle of the page*/
+        max-width: 800px;
+        margin: auto;
+        }
 
+        .text_align_center{
+        /* for centering text within their divs*/
+        text-align: center;
+        }
 
-    <body style="background-color:black;">
+        .row_links_journal {
+        /* this style corresponds to the row of the table containing the journal links*/
+        text-align: center;
+        }
 
-      <h1 style = "font-family: Times New Roman ; color: yellow; font-size: 70px; padding-bottom: 120px">CHESS OO 2.0<h1>
+        .row_links_out {
+        /* this style corresponds to the row of the table containing the journal links*/
+        text-align: center;
+        text-align: left;
+        }
 
-          <a class="nav-link code" style="font-family: Comic Sans MS; font-size: 80px; color:red; border-radius: 50px ; border-style:double ; position: absolute; left: 390px; width: 804px" href="/project/chessMenu/" >Click to Play CHESS!</a>
+        body {
+            color: black;
+        }
 
+        #comic_button {
+        font-family: Comic Sans MS; /* the best font in the world */
+        font-size: 400%; /* the size of the text within the div */
+        color: red; /* color of the div */
+        border-radius: 50px; /* provides the curved corners */
+        width: 50%; /* Makes the div always 50% of the webpage */
+        border-style: double; /*style of the border of the div */
+        text-align: center; /*centers the text on the div */
+        margin: auto; /*centers the div on page */
+        }
+      </style>
+</head>
 
-          <img id = "background" src= "https://cdn.discordapp.com/attachments/763494337798471721/770163622549651486/most_expensive_chess_board_ever.png" alt = "expensive chess set">
+<body style="background-color: black;">
+<a class="nav-link code" id="comic_button" href="/project/chessMenu/" >Click-Me: Play Chess</a>
 
-    </body>      
+<img id = "background" src= "https://cdn.discordapp.com/attachments/763494337798471721/770163622549651486/most_expensive_chess_board_ever.png" alt = "expensive chess set">
+
+<footer id="footer" class="py-4 bg-dark text-white-50"><!-- hard coded in the footer wil need to revise at a later time-->
+    <div class="container text-center">
+        <small>
+            <table class="center_on_page">
+                <tr>
+                    <th colspan="3" class="text_align_center"><a>Pair Share 1</a></th>
+                    <th colspan="3" class="text_align_center"><a>Pair Share 2</a></th>
+                </tr>
+                <tr>
+                    <td colspan="3" class="row_links_journal" >
+                        <a target = "_blank" href="https://padlet.com/kolinszeto/ir8kqoip55dsdu2d">Journal of Pair</a>
+                    </td>
+                    <td colspan="3" class="row_links_journal">
+                        <a target = "_blank" href="https://docs.google.com/document/d/1i08SNwkyA_2TCnJiLZWBPMQ7OCMuU5pGo1s7aEEmmCI/edit?pli=1">Journal of Pair</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="row_links_out">Colin Szeto</th><!-- Colin Szeto -->
+                    <th class="row_links_out">Devam Shrivastava</th><!-- Devam Shrivastava -->
+                    <th class="row_links_out">Shekar Krishnamoorthy</th><!-- Shekar Krishnamoorthy -->
+                    <th class="row_links_out">Kyle Myint</th><!-- Kyle Myint -->
+                    <th class="row_links_out">David Kim</th><!-- David Kim -->
+                </tr>
+                <tr>
+                    <th class="row_links_out"><a  target = "_blank" href="https://github.com/kolinbilly">{{ github }}</a></th><!-- Colin Szeto -->
+                    <th class="row_links_out"><a  target = "_blank" href="https://github.com/devamshri">{{ github }}</a></th><!-- Devam Shrivastava -->
+                    <th class="row_links_out"><a  target = "_blank" href="https://github.com/shekark642">{{ github }}</a></th><!-- Shekar Krishnamoorthy -->
+                    <th class="row_links_out"><a  target = "_blank" href="https://github.com/kylem314">{{ github }}</a></th><!-- Kyle Myint -->
+                    <th class="row_links_out"><a  target = "_blank" href="https://github.com/DavidKim37">{{ github }}</a></th><!-- David Kim -->
+                </tr>
+                <tr>
+                    <!--<th class="row_links_out"><a  target = "_blank" href="https://python-web-portfolio-series.colinszeto.repl.co/">{{ website }}</a></th> Colin Szeto -->
+                    <!--<th class="row_links_out"><a  target = "_blank" href="https://flaskportfolio.d3vis4g0d.repl.co/">{{ website }}</a></th> Devam Shrivastava -->
+                    <!--<th class="row_links_out"><a  target = "_blank" href="https://flaskportfolio-1.shekark642.repl.co/">{{ website }}</a></th> Shekar Krishnamoorthy -->
+                    <!--<th class="row_links_out"><a  target = "_blank" href="https://web-portfolio.kylemyint.repl.co/">{{ website }}</a></th> Kyle Myint -->
+                    <!--<th class="row_links_out"><a  target = "_blank" href="https://flaskportfolio-1.ironfire.repl.co/">{{ website }}</a></th> David Kim -->
+                </tr>
+            </table>
+        </small>
+    </div>
+</footer>
+</body>
 {% endblock %}
