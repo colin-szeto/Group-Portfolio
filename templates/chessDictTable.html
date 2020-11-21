@@ -2,10 +2,12 @@
 <!-- this is the template that allows for the user to  -->
 <head>
     <meta charset="UTF-8">
-    <title></title>
-
     <!--even style is green, odd styles is white -->
     <style>
+        #title{
+            font-size:100px;
+            font-weight: bold;
+        }
         .even {
         background-color: #4CAF50;
         border: none;
@@ -66,7 +68,7 @@
         .center__table{
             position: relative;
             margin: auto;
-            max-width: 800px;
+            max-width: 500px;
             top: 50px;
         }
         #header-fixed {
@@ -74,14 +76,22 @@
             top: 0px; display:none;
             background-color:white;
         }
-
+        th{
+        /* the cell style of the header there is only one Heade int his case*/
+        padding-right:20px;
+        padding-left:20px;
+        padding-bottom:20px;
+        font-size: 50px;
+        }
     </style>
 </head>
 <body onLoad="scrollDiv_init()">
-<!-- this is the working version -->
 <table class="center__table">
     <tr>
-        <th>
+    <th colspan="2"><a>Chess Using POST</a></th>
+    </tr>
+    <tr>
+        <td>
             <form method="post" id="chessInput"> <!-- this is another post tag to allow for user interaction -->
                 <table>
                     {%for row in allBoard%}
@@ -90,18 +100,18 @@
                         {% for header,unicode in row.items() %} <!-- if the row is even, 8,6,4,2 -->
                         {% if unicode == "emptySpace" %}<!-- if there is emtySpace as the value of the dictonary -->
                         <!-- this is replacing with white space -->
-                        <th><input class = "{{ loop.cycle('even', 'odd') }}" type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction={{header}} /></th>
+                        <td><input class = "{{ loop.cycle('even', 'odd') }}" type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction={{header}} /></td>
                         {%else%}
-                        <th><input class = "{{ loop.cycle('even', 'odd') }}" type ="submit" value={{unicode}} inputName="firstButton" formaction={{header}} /></th>
+                        <td><input class = "{{ loop.cycle('even', 'odd') }}" type ="submit" value={{unicode}} inputName="firstButton" formaction={{header}} /></td>
                         {% endif %}
                         {% endfor %}
                         {% else %}
                         {% for header,unicode  in row.items() %}   <!-- if the row is odd, 7,5,3,1 -->
                         {% if unicode == "emptySpace" %}<!-- if there is emtySpace as the value of the dictonary -->
                         <!-- this is replacing with white space -->
-                        <th><input  class = "{{ loop.cycle('odd', 'even') }}" type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction={{header}} /></th>
+                        <td><input  class = "{{ loop.cycle('odd', 'even') }}" type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction={{header}} /></td>
                         {%else%}
-                        <th><input  class = "{{ loop.cycle('odd', 'even') }}" type ="submit" value={{unicode}} inputName="firstButton" formaction={{header}} /></th>
+                        <td><input  class = "{{ loop.cycle('odd', 'even') }}" type ="submit" value={{unicode}} inputName="firstButton" formaction={{header}} /></td>
                         {% endif %}
                         {% endfor %}
                         {% endif %}
@@ -110,25 +120,25 @@
 
                 </table>
             </form>
-        </th>
-        <th>
+        </td>
+        <td>
             <table>
                 <tr>
-                    <th>move #</th>
-                    <th class="turn__values">&nbsp;&nbsp;&nbsp;&nbsp;values</th>
+                    <td>move #</td>
+                    <td class="turn__values">&nbsp;&nbsp;&nbsp;&nbsp;values</td>
                 </tr>
             </table>
             <div id="turn__table">
                 <table>
                     {% for row in movelist %}
                     <tr>
-                        <th class="turn__number">&nbsp;&nbsp;&nbsp;&nbsp;{{ loop.index }}</th>
-                        <th class= "{{ loop.cycle('white', 'black') }}" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{row}}</th>
+                        <td class="turn__number">&nbsp;&nbsp;&nbsp;&nbsp;{{ loop.index }}</td>
+                        <td class= "{{ loop.cycle('white', 'black') }}" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{row}}</td>
                     </tr>
                     {% endfor %}
                 </table>
             </div>
-        </th>
+        </td>
     </tr>
     <tr>
         <td>Previously Selected Cell: {{ displayClicked }}</td><!-- this line is to communicate hints to the player -->
