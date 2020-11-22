@@ -82,42 +82,42 @@ def returnClicked():
 @app.route("/a8", methods=['GET','POST'])#--------------------------------------------------------------------------------------------------------------------------------------------------------------this is where it starts
 def a8():
     if request.method == 'POST':
-        return render_template("chessDictTable.html", rowList=board, displayClicked="a8", allBoard=allBoard, movelist=chessData.movesdata("a8"), message=chessData.sample(len(movelist),chessData.movelist[-2:]))
+        return render_template("chessDictTable.html", rowList=board, displayClicked="a8", allBoard=allBoard, movelist=chessData.movesdata("a8",chessData.movelist[-2:]), message=chessData.sample(len(movelist),chessData.movelist[-2:]))
     return redirect("/project/chessDictTable/")
 @app.route("/a7", methods=['GET','POST'])
 def a7():
     if request.method == 'POST':
-        return render_template("chessDictTable.html", rowList=board,  displayClicked="a7", allBoard=allBoard, movelist=chessData.movesdata("a7"),  message=chessData.sample(len(movelist),chessData.movelist[-2:]))
+        return render_template("chessDictTable.html", rowList=board,  displayClicked="a7", allBoard=allBoard, movelist=chessData.movesdata("a7",chessData.movelist[-2:]),  message=chessData.sample(len(movelist),chessData.movelist[-2:]))
     return redirect("/project/chessDictTable/")
 @app.route("/a6", methods=['GET','POST'])
 def a6():
     if request.method == 'POST':
-        return render_template("chessDictTable.html", rowList=board,  displayClicked="a6", allBoard=allBoard, movelist=chessData.movesdata("a6"),  message=chessData.sample(len(movelist),chessData.movelist[-2:]))
+        return render_template("chessDictTable.html", rowList=board,  displayClicked="a6", allBoard=allBoard, movelist=chessData.movesdata("a6",chessData.movelist[-2:]),  message=chessData.sample(len(movelist),chessData.movelist[-2:]))
     return redirect("/project/chessDictTable/")
 @app.route("/a5", methods=['GET','POST'])
 def a5():
     if request.method == 'POST':
-        return render_template("chessDictTable.html", rowList=board,  displayClicked="a5", allBoard=allBoard, movelist=chessData.movesdata("a5"),  message=chessData.sample(len(movelist),chessData.movelist[-2:]))
+        return render_template("chessDictTable.html", rowList=board,  displayClicked="a5", allBoard=allBoard, movelist=chessData.movesdata("a5",chessData.movelist[-2:]),  message=chessData.sample(len(movelist),chessData.movelist[-2:]))
     return redirect("/project/chessDictTable/")
 @app.route("/a4", methods=['GET','POST'])
 def a4():
     if request.method == 'POST':
-        return render_template("chessDictTable.html", rowList=board,  displayClicked="a4", allBoard=allBoard, movelist=chessData.movesdata("a4"),  message=chessData.sample(len(movelist),chessData.movelist[-2:]))
+        return render_template("chessDictTable.html", rowList=board,  displayClicked="a4", allBoard=allBoard, movelist=chessData.movesdata("a4",chessData.movelist[-2:]),  message=chessData.sample(len(movelist),chessData.movelist[-2:]))
     return redirect("/project/chessDictTable/")
 @app.route("/a3", methods=['GET','POST'])
 def a3():
     if request.method == 'POST':
-        return render_template("chessDictTable.html", rowList=board,  displayClicked="a3", allBoard=allBoard, movelist=chessData.movesdata("a3"),  message=chessData.sample(len(movelist),chessData.movelist[-2:]))
+        return render_template("chessDictTable.html", rowList=board,  displayClicked="a3", allBoard=allBoard, movelist=chessData.movesdata("a3",chessData.movelist[-2:]),  message=chessData.sample(len(movelist),chessData.movelist[-2:]))
     return redirect("/project/chessDictTable/")
 @app.route("/a2", methods=['GET','POST'])
 def a2():
     if request.method == 'POST':
-        return render_template("chessDictTable.html", rowList=board,  displayClicked="a2", allBoard=allBoard, movelist=chessData.movesdata("a2"),  message=chessData.sample(len(movelist),chessData.movelist[-2:]))
+        return render_template("chessDictTable.html", rowList=board,  displayClicked="a2", allBoard=allBoard, movelist=chessData.movesdata("a2",chessData.movelist[-2:]),  message=chessData.sample(len(movelist),chessData.movelist[-2:]))
     return redirect("/project/chessDictTable/")
 @app.route("/a1", methods=['GET','POST'])
 def a1():
     if request.method == 'POST':
-        return render_template("chessDictTable.html", rowList=board,  displayClicked="a1", allBoard=allBoard, movelist=chessData.movesdata("a1"),  message=chessData.sample(len(movelist),chessData.movelist[-2:]))
+        return render_template("chessDictTable.html", rowList=board,  displayClicked="a1", allBoard=allBoard, movelist=chessData.movesdata("a1",chessData.movelist[-2:]),  message=chessData.sample(len(movelist),chessData.movelist[-2:]))
     return redirect("/project/chessDictTable/")
 @app.route("/b8", methods=['GET','POST'])
 def b8():

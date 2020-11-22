@@ -84,7 +84,9 @@
         font-size: 50px;
         font-family: Segoe UI;
         }
-
+        .invalid_move_class {
+        color: red;
+        }
     </style>
 </head>
 <body onLoad="scrollDiv_init()">
@@ -144,6 +146,7 @@
     </tr>
     <tr>
         <td>Previously Selected Cell: {{ displayClicked }}</td><!-- this line is to communicate hints to the player -->
+        <!-- if message == "last two moves were invalid" css = red -->
         <td>Message to the player: {{message}}</td> <!-- this line is to communicate weather if the move was valid to the player -->
     </tr>
     <tr>

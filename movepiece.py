@@ -172,7 +172,7 @@ def len5(usermove, board, storeboard, whitemove, whitecolor, blackcolor):
     movepiece(board, storeboard, whitemove, whitecolor, blackcolor)
 
 
-def len6(usermove, board, storeboard, whitemove, whitecolor, blackcolor):
+def len6(usermove, board, storeboard, whitemove, whitecolor, blackcolor): #resign is 6 character length, and corresponds to resing
     if usermove.lower() == "resign":
         if whitemove == "W":
             print("GG, Black wins.")
