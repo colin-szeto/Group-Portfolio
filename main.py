@@ -26,6 +26,14 @@ def chessPush():
 def calc():
     return render_template("calc.html", display="")
 
+@app.route("/project/chessEmbed")#for the dragable chess file
+def chess_embed():
+    return render_template("chessEmbed.html")
+
+@app.route("/project/chessEmbed2")#for the dragable chess file
+def chess_embed2():
+    return render_template("chessEmbed2.html")
+
 @app.route("/add", methods=['GET','POST'],)
 def addition():
     if request.method == 'POST':

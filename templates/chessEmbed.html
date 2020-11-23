@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{%block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chess Embed</title>
+    <style>
+
+        .click_run{
+            position: absolute;
+            opacity: 1;
+            text-align: center;
+            color: 	#008000; /* green */
+            font-size: 400%;
+            pointer-events: none;
+            top:20%;
+        }
+
+        .center{
+            text-align: center;
+        }
+            body {
+            height: 100%;
+          }
+    </style>
+</head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+  $(document).ready( function() {
+    $('#instructions').delay(6000).fadeOut();
+  });
+</script>
+
+<body>
+<div2 class="center"><div id="instructions"><h1 class="click_run"> Click the Run Button At the Top of the Page</h1></div></div2>
+
+
+<iframe height="800px" width="100%" src="https://repl.it/@colinszeto/ChessOO?lite=true&outputonly=true" scrolling="yes" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+</body>
+</html>
+
+{% endblock %}
