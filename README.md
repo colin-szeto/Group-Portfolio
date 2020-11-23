@@ -77,6 +77,5 @@ Notice the styling on the POST button: https://bit.ly/35Xa862.
         * The users will keep on selecting cells infinitely
             * Currently there is no end condition or win condition
             
-![alt text](https://c.files.bbci.co.uk/12A9B/production/_111434467_gettyimages-1143489763.jpg)
 
 
