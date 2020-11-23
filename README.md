@@ -31,7 +31,7 @@ Notice the styling on the POST button: https://bit.ly/35Xa862.
 </ul>
 <ul>In Game: 
 <ul>
-<li>64 submit buttons configured with JInja from the chessData.py document. 
+<li>64 submit buttons configured with JInja from the chessData.py document. ![alt text](images/selecting_the_square.JPG)
 <li>A table that shows all the previous moves that correspond to the move number: https://bit.ly/2Hpsbbl.
 <li>We were able to implement auto scrolling into the table with javascript so no longer how long the game is played, the players will always see the most recent move made: https://bit.ly/3q3kVDI.
 <li>Messages that allow for debugging.
