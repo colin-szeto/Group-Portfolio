@@ -16,14 +16,18 @@ As one can see the input of having the user type in the start and end square was
 
 ### Chess AI: 
 <ul>
-<li>Delving deep into the logic of code creating the chess AI allows the team to understand the concept of creating a bot and training it. We emphasize certain aspects as a priority to others. Without user input, the chess AI code can respond to their opponent by moving chess pieces based on the calculated value of each possible move. 
+<li>Delving deep into the logic of code creating the chess AI allows the team to understand the concept of creating a bot and training it. We emphasize certain aspects as a priority to others. Without user input, the chess AI code can respond to their opponent by moving chess pieces based on the calculated value of each possible move: http://76.167.66.16/project/chessEmbed2
+   
+To play, enter in number 2 to select the option to play single player against the AI, then type in your move, the board will flip to the Ai's perspective, press enter for the AI and the proccess will rinse and repeat. 
+   
+   ![HTML UI](https://media.giphy.com/media/ft2QE7wfWd5pyRfggB/giphy.gif)
+   
 </ul>
 
 ## Features: 
 
 ### Main menu using POST:
-<ul> 
-<li>
+
 <ul>
 <li>This is to allow for the interaction with the page run specific functions rather than just using hrefs to decorators (routes). 
 Notice the styling on the POST button: https://bit.ly/35Xa862.
@@ -33,7 +37,7 @@ Notice the styling on the POST button: https://bit.ly/35Xa862.
 </ul>
 </ul>
  ### In Game: 
- <ul>  
+   
    ![Game Board](images/game_screen.JPG)
 
 <ul>
