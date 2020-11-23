@@ -111,14 +111,14 @@
                                 {% endif %}
                             {% endfor %}
                         {% else %}
-                        {% for header,unicode  in row.items() %}   <!-- if the row is odd, 7,5,3,1 -->
-                        {% if unicode == "emptySpace" %}<!-- if there is emtySpace as the value of the dictonary -->
-                        <!-- this is replacing with white space -->
-                        <td><input  class = "{{ loop.cycle('odd', 'even') }}" type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction={{header}} /></td>
-                        {%else%}
-                        <td><input  class = "{{ loop.cycle('odd', 'even') }}" type ="submit" value={{unicode}} inputName="firstButton" formaction={{header}} /></td>
-                        {% endif %}
-                        {% endfor %}
+                            {% for header,unicode  in row.items() %}   <!-- if the row is odd, 7,5,3,1 -->
+                                {% if unicode == "emptySpace" %}<!-- if there is emtySpace as the value of the dictonary -->
+                                <!-- this is replacing with white space -->
+                                <td><input  class = "{{ loop.cycle('odd', 'even') }}" type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction={{header}} /></td>
+                                {%else%}
+                                <td><input  class = "{{ loop.cycle('odd', 'even') }}" type ="submit" value={{unicode}} inputName="firstButton" formaction={{header}} /></td>
+                                {% endif %}
+                            {% endfor %}
                         {% endif %}
                     </tr>
                     {% endfor %}
