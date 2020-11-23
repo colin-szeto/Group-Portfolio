@@ -11,13 +11,13 @@ A port of the original ascii chess game to a html user experience. This project 
 ##### Chess AI: 
 Delving deep into the logic of code creating the chess AI allows the team to understand the concept of creating a bot and training it. We emphasize certain aspects as a priority to others. Without user input, the chess AI code can respond to their opponent by moving chess pieces based on the calculated value of each possible move. 
 Features: 
-Main menu using POST
-This is to allow for the interaction with the page run specific functions rather than just using hrefs to decorators (routes)
-Notice the styling on the POST button: https://bit.ly/35Xa862
-In Game
-64 submit buttons configured with JInja from the chessData.py document
-A table that shows all the previous moves that correspond to the move number: https://bit.ly/2Hpsbbl
-We were able to implement auto scrolling into the table with javascript so no longer how long the game is played, the players will always see the most recent move made: https://bit.ly/3q3kVDI
-Messages that allow for debugging
-This is a simple implementation of jinja: https://bit.ly/3fnh3Iw
+Main menu using POST:
+This is to allow for the interaction with the page run specific functions rather than just using hrefs to decorators (routes). 
+Notice the styling on the POST button: https://bit.ly/35Xa862.
+In Game: 
+64 submit buttons configured with JInja from the chessData.py document. 
+A table that shows all the previous moves that correspond to the move number: https://bit.ly/2Hpsbbl.
+We were able to implement auto scrolling into the table with javascript so no longer how long the game is played, the players will always see the most recent move made: https://bit.ly/3q3kVDI.
+Messages that allow for debugging.
+This is a simple implementation of jinja: https://bit.ly/3fnh3Iw.
 
