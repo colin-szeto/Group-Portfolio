@@ -7,6 +7,7 @@ As this was a huge scope we split the project into two:
 
 ##### Chess with HTML interface:
 A port of the original ASCII chess game to a html user experience. This project is a test of understanding POST and how to tie python code (backend/ what the user cannot see) with jinja to the HTML (front end/what the user can see). Here was the original Ascii Chess Game (where all of the backend logic came from): https://repl.it/@KyleMyint/ASCII-Chess#0README.md. As one can see the input of having the user type in the start and end square was very tedious and hard for new players to understand how to move the pieces. We wanted to create a more intuitive user interface. As seen here:
+
 ![alt text](https://media.giphy.com/media/FcJwsBki2EXFwsX1VF/giphy.gif)
 
 
