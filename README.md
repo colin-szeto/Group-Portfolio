@@ -9,7 +9,7 @@ As this was a huge scope we split the project into two:
 ## Chess with HTML interface:
 A port of the original ASCII chess game to a html user experience. This project is a test of understanding POST and how to tie python code (backend/ what the user cannot see) with jinja to the HTML (front end/what the user can see). Here was the original Ascii Chess Game (where all of the backend logic came from): https://repl.it/@KyleMyint/ASCII-Chess#0README.md
 
-![ASCII UI](https://media.giphy.com/media/FcJwsBki2EXFwsX1VF/giphy.gif)
+![ASCII UI](https://media.giphy.com/media/FQYsVKJOJkP3kWrVNc/giphy.gif)
 
 As one can see the input of having the user type in the start and end square was very tedious and hard for new players to understand how to move the pieces. We wanted to create a more intuitive user interface. As seen here:
 
@@ -18,12 +18,12 @@ As one can see the input of having the user type in the start and end square was
 ## Chess AI: 
 
 Delving deep into the logic of code creating the chess AI allows the team to understand the concept of creating a bot and training it. We emphasize certain aspects as a priority to others. Without user input, the chess AI code can respond to their opponent by moving chess pieces based on the calculated value of each possible move: http://76.167.66.16/project/chessEmbed2
+
    
 To play, enter in number 2 to select the option to play single player against the AI, then type in your move, the board will flip to the Ai's perspective, press enter for the AI and the proccess will rinse and repeat. 
    
-   ![HTML UI](https://media.giphy.com/media/ft2QE7wfWd5pyRfggB/giphy.gif)
+   ![HTML UI of ASCII chess](https://media.giphy.com/media/ft2QE7wfWd5pyRfggB/giphy.gif)
    
-<div class="bg-blue-light mb-2">
 # Features: 
 
 ## Main menu using POST:
@@ -56,8 +56,6 @@ We were able to implement auto scrolling into the table with javascript so no lo
    ![Debug Messages](images/game_screen_message.JPG)
    
 </ul>
-
-</div>
 
 # Todos
 #### Cleaning up the HTML and JINJA
