@@ -9,17 +9,27 @@ As this was a huge scope we split the project into two:
 A port of the original ascii chess game to a html user experience. This project is a test of understanding POST and how to tie python code (backend/ what the user cannot see) with jinja to the HTML (front end/what the user can see). Here was the original Ascii Chess Game (where all of the backend logic came from): https://repl.it/@KyleMyint/ASCII-Chess#0README.md. As one can see the input of having the user type in the start and end square was very tedious and hard for new players to understand how to move the pieces. We wanted to create a more intuitive user interface. As seen here:
 
 ##### Chess AI: 
-Delving deep into the logic of code creating the chess AI allows the team to understand the concept of creating a bot and training it. We emphasize certain aspects as a priority to others. Without user input, the chess AI code can respond to their opponent by moving chess pieces based on the calculated value of each possible move. 
-Features: 
-Main menu using POST:
-This is to allow for the interaction with the page run specific functions rather than just using hrefs to decorators (routes). 
+<ul>
+<li>Delving deep into the logic of code creating the chess AI allows the team to understand the concept of creating a bot and training it. We emphasize certain aspects as a priority to others. Without user input, the chess AI code can respond to their opponent by moving chess pieces based on the calculated value of each possible move. 
+</ul>
+
+## Features: 
+<ul>
+<li>Main menu using POST:
+<ul>
+<li>This is to allow for the interaction with the page run specific functions rather than just using hrefs to decorators (routes). 
 Notice the styling on the POST button: https://bit.ly/35Xa862.
-In Game: 
-64 submit buttons configured with JInja from the chessData.py document. 
-A table that shows all the previous moves that correspond to the move number: https://bit.ly/2Hpsbbl.
-We were able to implement auto scrolling into the table with javascript so no longer how long the game is played, the players will always see the most recent move made: https://bit.ly/3q3kVDI.
-Messages that allow for debugging.
-This is a simple implementation of jinja: https://bit.ly/3fnh3Iw.
+</ul>
+</ul>
+<ul>In Game: 
+<ul>
+<li>64 submit buttons configured with JInja from the chessData.py document. 
+<li>A table that shows all the previous moves that correspond to the move number: https://bit.ly/2Hpsbbl.
+<li>We were able to implement auto scrolling into the table with javascript so no longer how long the game is played, the players will always see the most recent move made: https://bit.ly/3q3kVDI.
+<li>Messages that allow for debugging.
+<li>This is a simple implementation of jinja: https://bit.ly/3fnh3Iw.
+</ul>
+</ul>
 
 # Todos
 ## Cleaning up the HTML and JINJA
@@ -32,6 +42,7 @@ This is a simple implementation of jinja: https://bit.ly/3fnh3Iw.
 <li>Implement restrictive selection of the pieces. Currently any person can move any piece, can you implement the restriction of player 1 only moving the white pieces while player 2 can only move the black pieces?</li>
 <li>Need to implement a proper board reset, when restarting the board there are some posittions that are carried over from previous games</li>
 </ul>
+
 ## Implementing Databases:
 <ul>
 <li>Implement multiplayer, with the dawn of learning databases, can you implement playing online onto the game so that when players log in they are able to play with people who have also connected up onto the raspberry pi to play</li>
