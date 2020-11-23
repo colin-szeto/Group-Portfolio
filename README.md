@@ -6,12 +6,13 @@ As this was a huge scope we split the project into two:
 
 
 ##### Chess with HTML interface:
-A port of the original ASCII chess game to a html user experience. This project is a test of understanding POST and how to tie python code (backend/ what the user cannot see) with jinja to the HTML (front end/what the user can see). Here was the original Ascii Chess Game (where all of the backend logic came from): https://repl.it/@KyleMyint/ASCII-Chess#0README.md. As one can see the input of having the user type in the start and end square was very tedious and hard for new players to understand how to move the pieces. We wanted to create a more intuitive user interface. As seen here:
+A port of the original ASCII chess game to a html user experience. This project is a test of understanding POST and how to tie python code (backend/ what the user cannot see) with jinja to the HTML (front end/what the user can see). Here was the original Ascii Chess Game (where all of the backend logic came from): https://repl.it/@KyleMyint/ASCII-Chess#0README.md. 
 
-![alt text](https://media.giphy.com/media/FcJwsBki2EXFwsX1VF/giphy.gif)
+![ASCII UI](https://media.giphy.com/media/FcJwsBki2EXFwsX1VF/giphy.gif)
 
+As one can see the input of having the user type in the start and end square was very tedious and hard for new players to understand how to move the pieces. We wanted to create a more intuitive user interface. As seen here:
 
-
+![HTML UI](https://media.giphy.com/media/e5OcGdiqoyUIpIRhcj/giphy.gif)
 
 ##### Chess AI: 
 <ul>
@@ -31,10 +32,7 @@ Notice the styling on the POST button: https://bit.ly/35Xa862.
 </ul>
 <ul>In Game: 
 <ul>
-<li>64 submit buttons configured with JInja from the chessData.py document. 
-   
-![alt text](images/selecting_the_square.JPG)
-   
+<li>64 submit buttons configured with JInja from the chessData.py document.    
 <li>A table that shows all the previous moves that correspond to the move number: https://bit.ly/2Hpsbbl.
 <li>We were able to implement auto scrolling into the table with javascript so no longer how long the game is played, the players will always see the most recent move made: https://bit.ly/3q3kVDI.
 <li>Messages that allow for debugging.
@@ -46,6 +44,9 @@ Notice the styling on the POST button: https://bit.ly/35Xa862.
 ## Cleaning up the HTML and JINJA
 <ul>
 <li>Create a more user friendly ui with the chess board (can you change the css of the chess board when the user selects a specific cell to highlight the specific cell selected)</li>
+   
+   ![Showing Selected](images/selecting_the_square.JPG)   
+   
 <li>Consolidate the jinja that is passed into each of the render template within Main.py (currently if we want to change some of the code to redo the function of updating the jinja variables, we have to copy and paste the jinja variables 64 times over</li>
 <li>Customization, currently on the menu there is a button for customization that is currently disabled, we want this to allow the users to customize the color of the board, customize the color of their pieces. Can you also implement a preview of customization in the selector screen before starting the game?</li>
 <li>CSS and JS, can we create custom animation much like the button to start the game: https://bit.ly/35Xa862 with custom icons to represent each option (cogs for setting, a clip board with rules, etc)</li>
