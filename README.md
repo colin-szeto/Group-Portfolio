@@ -34,8 +34,8 @@ Notice the styling on the POST button: https://bit.ly/35Xa862.
 ![alt text](https://media.giphy.com/media/JIMV6VbzbMqTDqhHhr/giphy.gif)
 
 </ul>
-</ul>
- ## In Game: 
+
+## In Game: 
    
    ![Game Board](images/game_screen.JPG)
 
@@ -55,7 +55,7 @@ We were able to implement auto scrolling into the table with javascript so no lo
    ![Debug Messages](images/game_screen_message.JPG)
    
 </ul>
-</ul>
+
 
 # Todos
 ## Cleaning up the HTML and JINJA
