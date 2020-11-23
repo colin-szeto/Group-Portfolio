@@ -31,12 +31,24 @@ Notice the styling on the POST button: https://bit.ly/35Xa862.
 </ul>
 </ul>
 <ul>In Game: 
+   
+   ![Game Board](images/game_screen.JPG)
+
 <ul>
-<li>64 submit buttons configured with JInja from the chessData.py document.    
-<li>A table that shows all the previous moves that correspond to the move number: https://bit.ly/2Hpsbbl.
-<li>We were able to implement auto scrolling into the table with javascript so no longer how long the game is played, the players will always see the most recent move made: https://bit.ly/3q3kVDI.
+<li>64 submit buttons configured with JInja from the chessData.py document.   
+   
+   ![Chess Board](images/game_screen_table.JPG)
+   
+<li>A table that shows all the previous moves that correspond to the move number: https://bit.ly/2Hpsbbl.   
+We were able to implement auto scrolling into the table with javascript so no longer how long the game is played, the players will always see the most recent move made: https://bit.ly/3q3kVDI.
+   
+   ![Moves Table](images/game_screen_table_moves.JPG)
+   
 <li>Messages that allow for debugging.
 <li>This is a simple implementation of jinja: https://bit.ly/3fnh3Iw.
+   
+   ![Debug Messages](images/game_screen_message.JPG)
+   
 </ul>
 </ul>
 
