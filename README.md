@@ -16,7 +16,7 @@ As one can see the input of having the user type in the start and end square was
 ![HTML UI](https://media.giphy.com/media/e5OcGdiqoyUIpIRhcj/giphy.gif)
 
 ## Chess AI: 
-
+See ideation and decision making here: https://repl.it/@KyleMyint/ChessOO-2#README.md
 Delving deep into the logic of code creating the chess AI allows the team to understand the concept of creating a bot and training it. We emphasize certain aspects as a priority to others. Without user input, the chess AI code can respond to their opponent by moving chess pieces based on the calculated value of each possible move: http://76.167.66.16/project/chessEmbed2
 
    
