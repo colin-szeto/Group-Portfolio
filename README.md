@@ -22,7 +22,7 @@ To play, enter in number 2 to select the option to play single player against th
    
    ![HTML UI](https://media.giphy.com/media/ft2QE7wfWd5pyRfggB/giphy.gif)
    
-
+<div class="bg-blue-light mb-2">
 # Features: 
 
 ## Main menu using POST:
@@ -56,6 +56,7 @@ We were able to implement auto scrolling into the table with javascript so no lo
    
 </ul>
 
+</div>
 
 # Todos
 ## Cleaning up the HTML and JINJA
@@ -84,6 +85,7 @@ We were able to implement auto scrolling into the table with javascript so no lo
 <li>Frontend: Heavy use of iteration to display the table and the past moves. Usage of Jinja for and if loops to identify which CSS style to apply to each button. Usage of iteration </li>
 </ul>
 
+<div class="bg-blue-light mb-2">
 ## Code
 <ul>
 <li> The code has heavy implementation of python iterations functions</li>
@@ -101,5 +103,5 @@ We were able to implement auto scrolling into the table with javascript so no lo
         * The users will keep on selecting cells infinitely
             * Currently there is no end condition or win condition
             
-
+<div>
 
