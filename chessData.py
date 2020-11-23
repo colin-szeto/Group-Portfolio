@@ -17,6 +17,16 @@ board = { #intial configuration of the board
     "a2": "wp1", "b2": "wp2", "c2": "wp3", "d2": "wp4", "e2": "wp5", "f2": "wp6", "g2": "wp7", "h2": "wp8",
     "a1": "WR1n", "b1": "WN1", "c1": "WB1", "d1": "WQ1", "e1": "WK1n", "f1": "WB2", "g1": "WN2", "h1": "WR2n"}
 
+og_board = { #to set the board equal to when the create the board is pressed
+    "a8": "BR1n", "b8": "BN1", "c8": "BB1", "d8": "BQ1", "e8": "BK1n", "f8": "BB2", "g8": "BN2", "h8": "BR2n",
+    "a7": "bp1", "b7": "bp2", "c7": "bp3", "d7": "bp4", "e7": "bp5", "f7": "bp6", "g7": "bp7", "h7": "bp8",
+    "a6": "  ", "b6": "  ", "c6": "  ", "d6": "  ", "e6": "  ", "f6": "  ", "g6": "  ", "h6": "  ",
+    "a5": "  ", "b5": "  ", "c5": "  ", "d5": "  ", "e5": "  ", "f5": "  ", "g5": "  ", "h5": "  ",
+    "a4": "  ", "b4": "  ", "c4": "  ", "d4": "  ", "e4": "  ", "f4": "  ", "g4": "  ", "h4": "  ",
+    "a3": "  ", "b3": "  ", "c3": "  ", "d3": "  ", "e3": "  ", "f3": "  ", "g3": "  ", "h3": "  ",
+    "a2": "wp1", "b2": "wp2", "c2": "wp3", "d2": "wp4", "e2": "wp5", "f2": "wp6", "g2": "wp7", "h2": "wp8",
+    "a1": "WR1n", "b1": "WN1", "c1": "WB1", "d1": "WQ1", "e1": "WK1n", "f1": "WB2", "g1": "WN2", "h1": "WR2n"}
+
 keysBoard, valuesBoard = zip(*board.items()) # isolates the board keys and board values
 
 """ from main.py from chessOO neeeded to define the """
@@ -45,6 +55,16 @@ storeboard = {
     "h4": ["wp8"],
     "a3": ["wp1"], "b3": ["wp2"], "c3": ["wp3", "WN1"], "d3": ["wp4"], "e3": ["wp5"], "f3": ["wp6", "WN2"],
     "g3": ["wp7"], "h3": ["wp8"],
+    "a2": [], "b2": [], "c2": [], "d2": [], "e2": [], "f2": [], "g2": [], "h2": [],
+    "a1": [], "b1": [], "c1": [], "d1": [], "e1": [], "f1": [], "g1": [], "h1": []}
+
+ogstoreboard = {
+    "a8": [], "b8": [], "c8": [], "d8": [], "e8": [], "f8": [], "g8": [], "h8": [],
+    "a7": [], "b7": [], "c7": [], "d7": [], "e7": [], "f7": [], "g7": [], "h7": [],
+    "a6": [], "b6": [], "c6": [], "d6": [], "e6": [], "f6": [], "g6": [], "h6": [],
+    "a5": [], "b5": [], "c5": [], "d5": [], "e5": [], "f5": [], "g5": [], "h5": [],
+    "a4": [], "b4": [], "c4": [], "d4": [], "e4": [], "f4": [], "g4": [], "h4": [],
+    "a3": [], "b3": [], "c3": [], "d3": [], "e3": [], "f3": [], "g3": [], "h3": [],
     "a2": [], "b2": [], "c2": [], "d2": [], "e2": [], "f2": [], "g2": [], "h2": [],
     "a1": [], "b1": [], "c1": [], "d1": [], "e1": [], "f1": [], "g1": [], "h1": []}
 """ ------------------------------------------------ """
@@ -89,7 +109,6 @@ def split_board(board):
     allBoard = [board8, board7, board6, board5, board4, board3, board2, board1]
     return allBoard
 
-
 #keeping track of the moves
 movelist = []
 
@@ -111,70 +130,33 @@ def sample(currentMove,res):
         return message
     #if the move was invalid message = "last two moves were invalid"+ " " + usermove
 
-"""def sample_board(currentMove,res):
-    b = currentMove%2
-    if b != 0:
-        #this means the only the first value of the move has been selected
-        split_board(board)
-        return allBoard
-    else: #this means that two cells have been slected
-        usermove = ' '.join(res)#this is the string that is passed into movePiece
-        message = "last two moves were"+ " " + usermove
-        print(str(res))
-        len5(usermove, board, storeboard, whitemove, whitecolor, blackcolor)
-        return message"""
-
-# this takes the routes that are selected by the buttons an appends them to moveList
-def movesdata(toAppend):
-    movelist.append(toAppend)
-    sets = [movelist[x:x+2] for x in range(0, len(movelist), 2)]
-    return sets
-
-def actualMove(currentMove):
-    actMove = round(currentMove/2)
-    return actMove
-
-def previousMove(acutalMove):
-    if acutalMove%2 != 0:
-        print("previously: white's move")
-    else:
-        print("previously: black's move") #this is the player that is wi
-
-
 #from move piece code
 def len5(usermove, board, storeboard, whitemove, whitecolor, blackcolor):
-    try:
-        if usermove[2] == ' ':
-            piece = board[usermove[0:2]]#the value in the board dictonary will represent the piece
-            startpos = usermove[0:2]#the
-            print(usermove)
-            print(usermove[3:5])
-            if piece in storeboard[usermove[3:5]]:
-                board[startpos] = '  '
-                board[usermove[3:5]] = piece
-                print(board)
-                print("finish moving piece")#the board has updated by then
-                if whitemove == "W":
-                    #blackpersp(whitecolor, blackcolor, board) #print the board in black perspective
-                    print("white finished moving")
-                    whitemove = "B"
-                else:
-                    whitemove = "W"
-                    print("black finished moving")
-                    #whitepersp(whitecolor, blackcolor, board) #print the board in black perspective
-                storeboard = storeboardset(board, storeboard, whitemove, 1)
+    if usermove[2] == ' ':
+        piece = board[usermove[0:2]]#the value in the board dictonary will represent the piece
+        startpos = usermove[0:2]#the
+        print(usermove)
+        print(usermove[3:5])
+        if piece in storeboard[usermove[3:5]]:
+            board[startpos] = '  '
+            board[usermove[3:5]] = piece
+            print(board)
+            print("finish moving piece")#the board has updated by then
+            if whitemove == "W":
+                #blackpersp(whitecolor, blackcolor, board) #print the board in black perspective
+                print("white finished moving")
+                whitemove = "B"
             else:
-                message = "Please enter a valid move."
-                print("you have arrived")
-                print(board)#split_board(board)
-                """for board in split_board(board):
-                    print(board)"""
-
-    except Exception as e:#this may never be run, the input will always be the correct length
-        message = "Please enter a valid move." + e
-        #print(e)
-        print("exception")
-    #movepiece(board, storeboard, whitemove, whitecolor, blackcolor)
+                whitemove = "W"
+                print("black finished moving")
+                #whitepersp(whitecolor, blackcolor, board) #print the board in black perspective
+            storeboard = storeboardset(board, storeboard, whitemove, 1)
+        else:
+            message = "Please enter a valid move."
+            print("you have arrived")
+            print(board)#split_board(board)
+            """for board in split_board(board):
+                print(board)"""
 
 
 def storeboardset(board, storeboard, whitemove, setting):
@@ -280,3 +262,18 @@ def protdictfunc(board, storeboard, whitemove):
             protdict = kingprot(board, protdict, board[i][0:3], i[0], int(i[1]), storeboard)
     return protdict
 
+# this takes the routes that are selected by the buttons an appends them to moveList
+def movesdata(toAppend):
+    movelist.append(toAppend)
+    sets = [movelist[x:x+2] for x in range(0, len(movelist), 2)]
+    return sets
+
+def actualMove(currentMove):
+    actMove = round(currentMove/2)
+    return actMove
+
+def previousMove(acutalMove):
+    if acutalMove%2 != 0:
+        print("previously: white's move")
+    else:
+        print("previously: black's move") #this is the player that is wi

@@ -2,7 +2,7 @@
 import data
 from flask import Flask, render_template, request, redirect
 import chessData
-from chessData import board, movelist, allBoard
+from chessData import board, movelist, allBoard, og_board, ogstoreboard
 
 #create a Flask instance
 app = Flask(__name__)
@@ -22,38 +22,26 @@ def chessJS():
 def chessPush():
     return render_template("chessPush.html", displayBoard=board)
 
-@app.route("/project/calc")#for the dragable chess file
+@app.route("/project/calc")#for the calcualtor tesitng to get the basics of the project down
 def calc():
     return render_template("calc.html", display="")
 
-@app.route("/project/chessEmbed")#for the dragable chess file
+@app.route("/project/chessEmbed")#for the Hello Serieces Project
 def chess_embed():
     return render_template("chessEmbed.html")
 
-@app.route("/project/chessEmbed2")#for the dragable chess file
+@app.route("/project/chessEmbed2")#for chess AI code
 def chess_embed2():
     return render_template("chessEmbed2.html")
 
-@app.route("/add", methods=['GET','POST'],)
+@app.route("/add", methods=['GET','POST'],)#this is the calculator code
 def addition():
     if request.method == 'POST':
         form = request.form
         numberOne = int(form['numOne'])
         numberTwo = int(form['numTwo'])
         return render_template("calc.html", your_list=data.answersdata(numberOne,numberTwo))#data.playlist()
-
     return redirect("/calc")
-
-""""@app.route("/add", methods=['GET','POST'],) #this is the correct way to do it
-def addition():
-    if request.method == 'POST':
-        form = request.form
-        numberOne = int(form['numOne'])
-        numberTwo = int(form['numTwo'])
-        calc = numberOne + numberTwo #takes the user input and contatinates it together
-        return render_template("calc.html", your_list=data.answersdata(calc))#data.playlist()
-
-    return redirect("/calc")"""
 
 @app.route("/project/yourName", methods=['GET','POST'],)#for the dragable chess file
 def yourName():
@@ -63,12 +51,11 @@ def yourName():
         return render_template("calc.html", name = name)
     return redirect("/nameBack")
 
-
 @app.route("/project/journals")#for storing all the links to the webpage
 def journals():
   return render_template("journals2.html",repl="personal repl", website ="link website")#allows to define the text that is hyperlinked on the the personal journals
 
-#--------------------------------------------------- here is where the chess with POST starts
+#--------------------------------------------------- here is where the chess with POST starts---------------------------------------------------------
 @app.route("/project/chessMenu/") # this gets the user to the chess board
 def chessMenu():
     return render_template("chessMenu.html")
@@ -82,19 +69,12 @@ def createBoardTable():
     if request.method == 'POST': #if the meathod is post
         form = request.form
         movelist.clear()#resets the stored moves when create board is selected
+        board = og_board #resets the board
+        storeboard = ogstoreboard #resets the storboard
         return render_template("chessDictTable.html", displayClicked="  ", allBoard=chessData.split_board(board))
-        #board1=board1, board2=board2, board3=board3, board4=board4, board5=board5, board6=board6, board7=board7, board8=board8
-    return redirect("/project/chessDictTable/") #redirects to format into the chess board
+"""    return redirect("/project/chessDictTable/") #redirects to format into the chess board"""
 
-"""@app.route("/firstValue", methods=['GET','POST'])
-def returnClicked():
-    if request.method == 'POST':
-        form = request.form
-        #input = str(form['value'])
-        return render_template("chessDictTable.html", displayClicked="you clicked something", allBoard=allBoard)
-    return redirect("/project/chessDictTable/")"""
-
-@app.route("/a8", methods=['GET','POST'])#--------------------------------------------------------------------------------------------------------------------------------------------------------------this is where it starts
+@app.route("/a8", methods=['GET','POST'])#-------------------------------------------------------------------------------------this is where it starts
 def a8():
     if request.method == 'POST':
         return render_template("chessDictTable.html", displayClicked="a8", allBoard=chessData.split_board(board), movelist=chessData.movesdata("a8"), message=chessData.sample(len(movelist),chessData.movelist[-2:]))
