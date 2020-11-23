@@ -6,7 +6,7 @@ As this was a huge scope we split the project into two:
 
 
 ##### Chess with HTML interface:
-A port of the original ascii chess game to a html user experience. This project is a test of understanding POST and how to tie python code (backend/ what the user cannot see) with jinja to the HTML (front end/what the user can see). Here was the original Ascii Chess Game (where all of the backend logic came from): https://repl.it/@KyleMyint/ASCII-Chess#0README.md. As one can see the input of having the user type in the start and end square was very tedious and hard for new players to understand how to move the pieces. We wanted to create a more intuitive user interface. As seen here:
+A port of the original ASCII chess game to a html user experience. This project is a test of understanding POST and how to tie python code (backend/ what the user cannot see) with jinja to the HTML (front end/what the user can see). Here was the original Ascii Chess Game (where all of the backend logic came from): https://repl.it/@KyleMyint/ASCII-Chess#0README.md. As one can see the input of having the user type in the start and end square was very tedious and hard for new players to understand how to move the pieces. We wanted to create a more intuitive user interface. As seen here:
 
 ##### Chess AI: 
 <ul>
@@ -48,3 +48,27 @@ Notice the styling on the POST button: https://bit.ly/35Xa862.
 <li>Implement multiplayer, with the dawn of learning databases, can you implement playing online onto the game so that when players log in they are able to play with people who have also connected up onto the raspberry pi to play</li>
 <li>Implement replay game, this was an original feature of the ASCII CHESS game, can we tie each saved game to the login of the user to allow each player to look at their past games</li>
 </ul>
+
+## Coding Algorithms 
+<ul>
+<li>Backend: Heavy usage of iteration, found in the board dictionary, we iterate through the board and compare the values within the board dictionary to the character dictionary, this allows us to take a default configuration of the board and map the necessary strings and UNICODE for the HTML to interpret. Heavy use of splitting lists to allow for formatting within a table. </li>
+<li>Frontend: Heavy use of iteration to display the table and the past moves. Usage of Jinja for and if loops to identify which CSS style to apply to each button. Usage of iteration </li>
+</ul>
+
+## Code
+<ul>
+<li> The code has heavy implementation of python iterations functions</li>
+<li> Heavy usage of jinja iteration </li>
+<li> Heavy usage of routes and POST </li>
+</ul>
+
+## Logic
+* The progression of the game goes as follows
+    * User starts game
+        * Select a cell
+            * Store the selected cell
+        * Select a cell
+            * On the second selection the program converts the cells pressed into a string that the len5 function can take into its system and process whether the move was valid
+        * The users will keep on selecting cells infinitely
+            * Currently there is no end condition or win condition
+
