@@ -24,7 +24,7 @@ A port of the original ASCII chess game to a html user experience. This project 
 <ul>
 <li>This is to allow for the interaction with the page run specific functions rather than just using hrefs to decorators (routes). 
 Notice the styling on the POST button: https://bit.ly/35Xa862.
-   ![alt text](https://media.giphy.com/media/JIMV6VbzbMqTDqhHhr/giphy.gif)
+![alt text](https://media.giphy.com/media/JIMV6VbzbMqTDqhHhr/giphy.gif)
 </ul>
 </ul>
 <ul>In Game: 
