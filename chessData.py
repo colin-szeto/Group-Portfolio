@@ -111,6 +111,19 @@ def sample(currentMove,res):
         return message
     #if the move was invalid message = "last two moves were invalid"+ " " + usermove
 
+"""def sample_board(currentMove,res):
+    b = currentMove%2
+    if b != 0:
+        #this means the only the first value of the move has been selected
+        split_board(board)
+        return allBoard
+    else: #this means that two cells have been slected
+        usermove = ' '.join(res)#this is the string that is passed into movePiece
+        message = "last two moves were"+ " " + usermove
+        print(str(res))
+        len5(usermove, board, storeboard, whitemove, whitecolor, blackcolor)
+        return message"""
+
 # this takes the routes that are selected by the buttons an appends them to moveList
 def movesdata(toAppend):
     movelist.append(toAppend)
