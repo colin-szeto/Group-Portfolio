@@ -7,7 +7,7 @@ from checkfunctions import *
 from protectionfunctions import *
 #from movepiece import movepiece
 
-board = {
+board = { #intial configuration of the board
     "a8": "BR1n", "b8": "BN1", "c8": "BB1", "d8": "BQ1", "e8": "BK1n", "f8": "BB2", "g8": "BN2", "h8": "BR2n",
     "a7": "bp1", "b7": "bp2", "c7": "bp3", "d7": "bp4", "e7": "bp5", "f7": "bp6", "g7": "bp7", "h7": "bp8",
     "a6": "  ", "b6": "  ", "c6": "  ", "d6": "  ", "e6": "  ", "f6": "  ", "g6": "  ", "h6": "  ",
@@ -23,6 +23,16 @@ keysBoard, valuesBoard = zip(*board.items()) # isolates the board keys and board
 whitemove = "W"
 whitecolor = "red"
 blackcolor = "lighter blue"
+
+"""storeboard = {
+    "a8": [], "b8": [], "c8": [], "d8": [], "e8": [], "f8": [], "g8": [], "h8": [],
+    "a7": [], "b7": [], "c7": [], "d7": [], "e7": [], "f7": [], "g7": [], "h7": [],
+    "a6": [], "b6": [], "c6": [], "d6": [], "e6": [], "f6": [], "g6": [], "h6": [],
+    "a5": [], "b5": [], "c5": [], "d5": [], "e5": [], "f5": [], "g5": [], "h5": [],
+    "a4": [], "b4": [], "c4": [], "d4": [], "e4": [], "f4": [], "g4": [], "h4": [],
+    "a3": [], "b3": [], "c3": [], "d3": [], "e3": [], "f3": [], "g3": [], "h3": [],
+    "a2": [], "b2": [], "c2": [], "d2": [], "e2": [], "f2": [], "g2": [], "h2": [],
+    "a1": [], "b1": [], "c1": [], "d1": [], "e1": [], "f1": [], "g1": [], "h1": []}"""
 
 storeboard = {
     "a8": [], "b8": [], "c8": [], "d8": [], "e8": [], "f8": [], "g8": [], "h8": [],
@@ -66,6 +76,20 @@ for square,piece in board.items():
 # placing all of the ranks (rows) allows the jinja template to show each dictonary as the row of the tbale
 allBoard = [board8, board7, board6, board5, board4, board3, board2, board1]
 
+def split_board(board):
+    for square,piece in board.items():
+        if piece != "  ":
+            # if the values is not empty then replace the cell value with the unicode of the value
+            listBoard[int(square[1])].update({square:dictionarything[piece[0:2]]})
+        else:
+            """if the values of the dictonary are empty, we replace it with a string emptySpace, 
+            this allows for us in the jinja template replace the value emptySpace with &nbsp;&nbsp;&nbsp;&nbsp; 
+            or whitespace only interpreted by html"""
+            listBoard[int(square[1])].update({square:"emptySpace"})
+    allBoard = [board8, board7, board6, board5, board4, board3, board2, board1]
+    return allBoard
+
+
 #keeping track of the moves
 movelist = []
 
@@ -83,9 +107,6 @@ def sample(currentMove,res):
         usermove = ' '.join(res)#this is the string that is passed into movePiece
         message = "last two moves were"+ " " + usermove
         print(str(res))
-        #move1 = {2: len2, 3: len3, 4: len4, 5: len5, 6: len6, 7: len7} #currently len5 funciton will be the only function that will be called
-        #move1[len(usermove)](usermove, board, storeboard, whitemove, whitecolor, blackcolor)
-        #print("able to reach before len5")
         len5(usermove, board, storeboard, whitemove, whitecolor, blackcolor)
         return message
     #if the move was invalid message = "last two moves were invalid"+ " " + usermove
@@ -111,24 +132,35 @@ def previousMove(acutalMove):
 def len5(usermove, board, storeboard, whitemove, whitecolor, blackcolor):
     try:
         if usermove[2] == ' ':
-            piece = board[usermove[0:2]]
-            startpos = usermove[0:2]
+            piece = board[usermove[0:2]]#the value in the board dictonary will represent the piece
+            startpos = usermove[0:2]#the
+            print(usermove)
+            print(usermove[3:5])
             if piece in storeboard[usermove[3:5]]:
                 board[startpos] = '  '
                 board[usermove[3:5]] = piece
+                print(board)
+                print("finish moving piece")#the board has updated by then
                 if whitemove == "W":
                     #blackpersp(whitecolor, blackcolor, board) #print the board in black perspective
+                    print("white finished moving")
                     whitemove = "B"
                 else:
                     whitemove = "W"
+                    print("black finished moving")
                     #whitepersp(whitecolor, blackcolor, board) #print the board in black perspective
                 storeboard = storeboardset(board, storeboard, whitemove, 1)
             else:
                 message = "Please enter a valid move."
-                print("you have arived")
+                print("you have arrived")
+                print(board)#split_board(board)
+                """for board in split_board(board):
+                    print(board)"""
+
     except Exception as e:#this may never be run, the input will always be the correct length
         message = "Please enter a valid move." + e
-        print(e)
+        #print(e)
+        print("exception")
     #movepiece(board, storeboard, whitemove, whitecolor, blackcolor)
 
 
@@ -234,3 +266,4 @@ def protdictfunc(board, storeboard, whitemove):
             print("Ky")
             protdict = kingprot(board, protdict, board[i][0:3], i[0], int(i[1]), storeboard)
     return protdict
+

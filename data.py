@@ -9,14 +9,19 @@ def playdata():
 
 thislist = []
 
-def answersdata(toAppend):
-    thislist.append(toAppend)
+def answersdata(numberOne, numberTwo):
+    calc = numberOne + numberTwo #takes the user input and contatinates it together
+    thislist.append(calc)
     return thislist
+
+"""def answersdata(toAppend): #this is the correct way
+    thislist.append(toAppend)
+    return thislist"""
 
 def testdata():
     parent_list = [{'A': 'val1', 'B': 'val2'}, {'C': 'val3', 'D': 'val4'}]
     return parent_list
-
+"""
 
 board = {
     "a8": "BR1n", "b8": "BN1", "c8": "BB1", "d8": "BQ1", "e8": "BK1n", "f8": "BB2", "g8": "BN2", "h8": "BR2n",
@@ -27,4 +32,4 @@ board = {
     "a3": "  ", "b3": "  ", "c3": "  ", "d3": "  ", "e3": "  ", "f3": "  ", "g3": "  ", "h3": "  ",
     "a2": "wp1", "b2": "wp2", "c2": "wp3", "d2": "wp4", "e2": "wp5", "f2": "wp6", "g2": "wp7", "h2": "wp8",
     "a1": "WR1n", "b1": "WN1", "c1": "WB1", "d1": "WQ1", "e1": "WK1n", "f1": "WB2", "g1": "WN2", "h1": "WR2n"
-}
+}"""
